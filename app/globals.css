@@ -180,7 +180,7 @@ a:hover { opacity: 0.7; }
 
 .prose { display: flex; flex-direction: column; gap: 24px; }
 .prose > p, .prose > ul, .prose > ol, .prose > h3 { margin-left: 340px; max-width: 820px; }
-.prose p { margin: 0; font-size: 21px; line-height: 1.55; color: var(--body); }
+.prose p { margin-top: 0; margin-bottom: 0; font-size: 21px; line-height: 1.55; color: var(--body); }
 .prose h3 { margin-top: 8px; margin-bottom: 0; font-size: 22px; font-weight: 600; }
 .prose ul, .prose ol { margin-top: 0; margin-bottom: 0; padding: 0; list-style: none; counter-reset: item; }
 .prose li { position: relative; padding: 16px 0 16px 56px; border-top: 1px solid var(--line); font-size: 19px; line-height: 1.5; color: var(--body); }
