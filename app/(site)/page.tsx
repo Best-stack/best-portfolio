@@ -1,6 +1,5 @@
 import { Hero } from '@/components/Hero'
-import { ArrowUpRight } from '@/components/icons'
-import { ProjectCard } from '@/components/ProjectCard'
+import { WorkGrid } from '@/components/WorkGrid'
 import { getHome, getProjects, getSettings } from '@/lib/content'
 import { imgSrc } from '@/lib/img'
 
@@ -8,7 +7,6 @@ export const revalidate = 60
 
 export default async function HomePage() {
   const [home, settings, projects] = await Promise.all([getHome(), getSettings(), getProjects()])
-  const featured = home.featured.length ? home.featured : projects.slice(0, 4)
 
   return (
     <>
@@ -36,7 +34,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="work" className="works wrap">
+      <section id="work" className="works work-grid-wrap">
         <div className="works__head">
           <div className="label">(Featured)</div>
           <h2 className="display">
@@ -45,16 +43,7 @@ export default async function HomePage() {
             works
           </h2>
         </div>
-        <div className="works__list">
-          {featured.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} priority={i === 0} />
-          ))}
-        </div>
-        <div className="works__more">
-          <a className="pill" href="/work">
-            All case studies ({projects.length}) <ArrowUpRight />
-          </a>
-        </div>
+        <WorkGrid projects={projects} />
       </section>
 
       {home.philosophy && (

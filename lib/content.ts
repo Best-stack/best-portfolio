@@ -23,7 +23,7 @@ async function query<T>(groq: string, params: Record<string, unknown> = {}): Pro
 }
 
 const IMG = `{ "url": asset->url, "alt": alt, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height }`
-const CARD = `"slug": slug.current, title, summary, "tags": coalesce(tags, []), "cover": cover${IMG}`
+const CARD = `"slug": slug.current, title, summary, "tags": coalesce(tags, []), "cover": cover${IMG}, "video": cardVideo.asset->url`
 
 /* ------------------------------------------------------------------ */
 /* Local fallback (content/seed.json) — used until Sanity is set up    */

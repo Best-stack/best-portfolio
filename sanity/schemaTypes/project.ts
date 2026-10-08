@@ -147,6 +147,15 @@ export const project = defineType({
       of: [defineArrayMember({ type: 'string' })],
       options: { layout: 'tags' },
     }),
+    defineField({
+      name: 'cardVideo',
+      title: 'Card video',
+      description:
+        'Short looping video shown on the work grid (plays silently, on repeat). Best: MP4, 3:2 landscape (e.g. 1500×1000), 6–15 seconds, under 10 MB, no sound. The card image is shown until it loads.',
+      type: 'file',
+      group: 'card',
+      options: { accept: 'video/mp4,video/webm,video/quicktime' },
+    }),
     defineField({ name: 'cover', title: 'Card image', type: 'image', group: 'card', options: { hotspot: true } }),
     defineField({ name: 'hero', title: 'Case study hero image', type: 'image', group: 'card', options: { hotspot: true } }),
     defineField({ name: 'role', type: 'string', group: 'card' }),

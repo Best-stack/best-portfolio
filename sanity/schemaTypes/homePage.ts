@@ -41,7 +41,8 @@ export const homePage = defineType({
     defineField({
       name: 'featuredProjects',
       title: 'Featured projects',
-      description: 'Shown on the home page, in this order.',
+      description: 'Not used any more — the home page now shows every case study, in the order set on each one.',
+      hidden: true,
       type: 'array',
       group: 'work',
       of: [defineArrayMember({ type: 'reference', to: [{ type: 'project' }] })],

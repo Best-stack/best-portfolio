@@ -20,6 +20,8 @@ export type ProjectCard = {
   summary?: string
   tags: string[]
   cover: Img
+  /** Looping preview video for the work grid (optional — falls back to the cover image). */
+  video?: string | null
 }
 
 export type Project = ProjectCard & {

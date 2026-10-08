@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { ProjectCard } from '@/components/ProjectCard'
+import { WorkGrid } from '@/components/WorkGrid'
 import { SiteHeader } from '@/components/SiteHeader'
 import { getProjects, getSettings } from '@/lib/content'
 
@@ -12,7 +12,7 @@ export default async function WorkPage() {
   return (
     <>
       <SiteHeader settings={settings} current="work" />
-      <section className="page-top wrap">
+      <section className="page-top work-grid-wrap">
         <div className="works__head">
           <div className="label">({projects.length} case studies)</div>
           <h1 className="display">
@@ -21,11 +21,7 @@ export default async function WorkPage() {
             works
           </h1>
         </div>
-        <div className="works__list">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.slug} project={p} priority={i === 0} />
-          ))}
-        </div>
+        <WorkGrid projects={projects} />
       </section>
     </>
   )
