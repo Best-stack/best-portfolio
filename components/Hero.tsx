@@ -36,7 +36,7 @@ export function Hero({ portrait, marqueeText, roles, settings, gridSize = 22, st
     // image endpoint (same origin) instead of directly from the Sanity/Framer CDN.
     const src = portrait.url.startsWith('/')
       ? portrait.url
-      : `/_next/image?url=${encodeURIComponent(portrait.url)}&w=2048&q=85`
+      : `/_next/image?url=${encodeURIComponent(portrait.url)}&w=2048&q=75`
 
     const gl = canvas.getContext('webgl', { premultipliedAlpha: false, antialias: false })
     if (!gl) return // the <img> fallback below stays visible
