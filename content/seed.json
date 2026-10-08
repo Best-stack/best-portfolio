@@ -1,0 +1,533 @@
+{
+  "imageBase": "https://framerusercontent.com/",
+  "settings": {
+    "name": "Best Omotayo",
+    "role": "Product Designer",
+    "location": "Toronto, ON",
+    "seoDescription": "Best Omotayo is a product designer in Toronto designing intuitive, human-centric experiences.",
+    "calendlyUrl": "https://calendly.com/bestomotayo",
+    "resumeUrl": "https://drive.google.com/file/d/1k1QM_oA8xdRmmJIknsMqdILB47y92w3K/view?usp=sharing",
+    "socials": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/uxbestomotayo/" },
+      { "label": "Behance", "url": "https://www.behance.net/bestomotayo" },
+      { "label": "Calendly", "url": "https://calendly.com/bestomotayo" }
+    ],
+    "footerHeadline": "I'm just a call away",
+    "footerCtaLabel": "Schedule a call"
+  },
+  "home": {
+    "heroPortrait": "local:public/portrait-bw.jpg",
+    "marqueeText": "Best Omotayo –",
+    "heroRoles": ["Product Designer", "Toronto, ON"],
+    "aboutStatement": "I design human-centric products, guided by my past life as a piano teacher — where creativity and functionality have to play in time.",
+    "aboutBody": "I'm constantly learning, attending workshops as well as delivering them.",
+    "skills": ["UI/UX Design", "Branding", "Animation & Motion"],
+    "featured": ["falcon", "elysium", "lura", "fcmb"],
+    "philosophy": "Simplicity isn’t a feature, and elegance isn’t extra — they’re the foundation of experience.",
+    "shots": [
+      { "title": "Taco Tuesday", "kind": "Motion (AE)", "image": "images/RHYgmbRFr0Q7kl0nIQzGg3pFMw.gif" },
+      { "title": "Dawn Meditation App", "kind": "Mobile App", "image": "images/s4ElgSn8wO4kQM9AFqZjXF1RYQc.jpg" },
+      { "title": "StreetChurch App", "kind": "Mobile App", "image": "images/ZvZsXJky9sngpBy6OAgSGJ751c.png" }
+    ]
+  },
+  "about": {
+    "quote": "I create journeys so smooth, even Einstein would agree – brilliance lies in simplicity.",
+    "image": "images/77hOSFBO73hfmWsMjF5nxDww.jpeg",
+    "intro": "I'm passionate about my work because I believe that good design can make a real difference in the world. It can help businesses attract new customers, build stronger relationships, and solve real life problems. I love the challenge of taking someone's vision and turning it into a reality.",
+    "experience": [
+      { "years": "2023 — 2024", "role": "User Experience Designer", "company": "Rova", "location": "United Kingdom" },
+      { "years": "2022 — 2023", "role": "Product Designer", "company": "First City Monument Bank", "location": "United Kingdom" },
+      { "years": "2021 — 2023", "role": "User Experience Designer", "company": "Delitbee", "location": "Spain" },
+      { "years": "2019 — 2021", "role": "UX Designer", "company": "Aladdin Digital Bank", "location": "Nigeria" }
+    ],
+    "whyHeadline": "I’m dedicated and love making a change through design",
+    "why": [
+      { "title": "Global Experience", "text": "I've worked with clients and talents from all around the world. This has given me experience with different people, culture and problems." },
+      { "title": "Latest tech", "text": "Always on a journey to discover and implement the best design practices to create innovative and award-winning digital experiences." },
+      { "title": "No-code enthusiast", "text": "I fell in love with tools like Figma and Framer to design and ship web projects which is both time and cost effective and most importantly super easy to customize." },
+      { "title": "Right on time", "text": "I am committed to providing the highest quality of service. I am always striving to exceed expectations and I am proud of the positive feedback from my clients." }
+    ],
+    "contactIntro": "I am eager to hear from you and discuss how my design expertise can help you achieve your business goals. Contact me today to schedule a consultation."
+  },
+  "projects": [
+    {
+      "slug": "falcon",
+      "title": "Falcon Design System",
+      "summary": "Creating a simple, impactful, yet comprehensive design system",
+      "tags": ["Design System"],
+      "role": "UI/UX Design",
+      "date": "November 2024",
+      "contributors": "Best Omotayo, Maxwell Pinto, Victoria Agbamoro",
+      "previewLabel": "Classified 🔐",
+      "cover": "images/UXkFgB5JmnPwBZXENZQ7ymzYDo.png",
+      "hero": "images/UXkFgB5JmnPwBZXENZQ7ymzYDo.png",
+      "sections": [
+        { "heading": "What is a Design System", "content": [
+          { "p": "Design systems are ever-evolving sets of reusable components, principles, and guidelines that give designers and engineers a shared language for consistent product and web design." },
+          { "p": "Good design systems help designers understand what to make and how to make it, but they also provide the rationale and motivation behind the design." }
+        ]},
+        { "heading": "The Problem", "content": [
+          { "p": "The design team faced challenges with component management and standardization. Without a unified approach, designers created components individually, either within project files or scattered across separate files. This fragmented system made it difficult for designers to collaborate effectively or take over each other's work, as each designer maintained their own unique component library." },
+          { "p": "The lack of clear documentation and guidelines around component states, behaviors, interactions, and use cases also created a disconnect between design and production teams." },
+          { "img": [{ "src": "images/xlVTG3grRw4SWtnffJ9yPEDKi4c.png", "size": "full" }] }
+        ]},
+        { "heading": "Research", "content": [
+          { "p": "I conducted in-depth interviews across three design teams who create digital products for wealth management. These conversations with both designers and front-end developers provided essential insights into their workflows and challenges." },
+          { "img": [{ "src": "images/qTHP3NVNs2jR5wssAhC5jm6ebUU.png", "size": "full" }] }
+        ]},
+        { "heading": "What Methodology Did I Use", "content": [
+          { "h": "Atomic Design" },
+          { "p": "Atomic Design is a methodology created by Brad Frost seeking to provide direction on building interface design systems. Atomic design is not a linear process, but rather a mental model to help us think of our user interfaces as both a cohesive whole and a collection of parts at the same time." },
+          { "img": [{ "src": "images/A47iNFeVpJued8wTxaE6JXegtmc.png", "size": "full" }] }
+        ]},
+        { "heading": "Some of the Components Designed", "content": [
+          { "ul": ["Alert", "Avatar", "Badge", "Button", "Card", "Dropdown", "Text input", "Text area", "Checkbox", "Radio", "Toggle", "Select", "Link", "Accordions", "Modal", "Progress bar", "Loading spinner", "Tab", "Tag", "Tooltip"] }
+        ]},
+        { "heading": "Hold on, there's a catch", "content": [
+          { "p": "Even though a design system is supposed to have a lot of components, which it did, our system of libraries won't have every component needed." },
+          { "p": "And that's where I came in. My job was to create these components, but also to watch out for new components designers come up with, and how we can graduate them into our library system or use them in isolation." }
+        ]},
+        { "heading": "This is how I organize the elements in Figma", "content": [
+          { "p": "I always go for an organized look when creating a design system. This helps the designers locate components faster and allows for smooth collaboration between them and the developers." },
+          { "img": [{ "src": "images/UK8EF1QrZJLhSmLwpcz6BSxzlfk.png", "size": "full" }] }
+        ]},
+        { "heading": "Some Component Samples", "content": [
+          { "img": [{ "src": "images/XSemV8kEI0apNpb585YChYrA0U.png", "size": "full" }] },
+          { "img": [{ "src": "images/JihmKRkzK5nqq0w1ye4DnMnOWfs.png", "size": "full" }] },
+          { "img": [{ "src": "images/L7PNn97qCb44VGVxo2yEVx0yRPw.png", "size": "half" }, { "src": "images/sqkAGkUkVpDLVBVCmdkXnsQiEF8.png", "size": "half" }] },
+          { "img": [{ "src": "images/XyNqM2VSQ3yaWEye0NOL8W7XcXY.png", "size": "half" }, { "src": "images/xJ1ZYW8JO1p5C5Fi5ZKt28P9lI.png", "size": "half" }] },
+          { "img": [{ "src": "images/K0rSpbkZ0Q8jmhTVFhWolF5A2D4.png", "size": "full" }] },
+          { "img": [{ "src": "images/cC5A70pQUJBQPrx47OQSOxRa90.png", "size": "full" }] }
+        ]},
+        { "heading": "The Place of Comprehensive Documentation", "content": [
+          { "p": "The best way to make sure design systems are implemented perfectly is to document extensively. I also try to provide examples of how the components' source code should look." },
+          { "p": "This gives developers an idea of how it's going to be implemented." },
+          { "img": [{ "src": "images/s4r2nCCZ4P4gcFmC5bUfsDaCQ84.png", "size": "full" }] }
+        ]},
+        { "heading": "Some important things I learnt", "content": [
+          { "ul": [
+            "The design system is always a work in progress, and it is constantly being updated.",
+            "Designers should be encouraged to override freely but with caution. Sometimes redesigning a component can lead to the growth of that component, so we need to override master components with caution.",
+            "Creating multiple variants helps designers infuse content faster instead of creating from scratch.",
+            "New hires adapt faster to the design style of the company."
+          ]}
+        ]},
+        { "heading": "Outcome", "content": [
+          { "ol": [
+            "Less time spent on coding",
+            "Better communication and implementation between developers and designers",
+            "Product development process was faster",
+            "New hires adapt faster to the design style of the company"
+          ]}
+        ]}
+      ]
+    },
+    {
+      "slug": "elysium",
+      "title": "Elysium",
+      "summary": "The bank of the young",
+      "tags": ["Fintech/Banking", "UI/UX", "Branding"],
+      "role": "Branding, Product design",
+      "date": "June 2022",
+      "contributors": "Best Omotayo",
+      "cover": "images/YNge1C7fwoGjuN4Y8QZNM1FqmYc.png",
+      "hero": "images/54KnmKdMtaZoQwkWIuoogeBgceY.jpg",
+      "sections": [
+        { "heading": "Problem", "content": [
+          { "p": "Young people often struggle with traditional banking services, which are not designed with their needs or preferences in mind. They seek user-friendly tools, flexibility, and modern solutions but are often met with outdated processes and high fees. Additionally, young users desire aesthetically pleasing, visually engaging interfaces that align with their digital-first lifestyle. This fintech mobile app aims to bridge the gap by offering a seamless, intuitive banking experience with a beautiful design tailored specifically for young people." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "The app's goals and objectives are to allow people to:" },
+          { "ul": ["Send money", "Receive money from other friends using Elysium", "Fast analytics", "Find nearest ATMs and branches", "Fast payments with virtual cards"] }
+        ]},
+        { "heading": "Branding & Visual Elements Design", "content": [
+          { "p": "The word Elysium comes from the idyllic Greek mythological place called the Elysian Fields, often equated with Paradise, a heavenly resting place to go in the afterlife." },
+          { "p": "The brand's aim is to give its users a paradise experience in everything they do. They need not go to the afterlife before they can enjoy paradise. The Elysium brand is paradise on earth." },
+          { "p": "The logo marks are illustrations of the Elysian Fields, a place of peace, joy and happiness." },
+          { "img": [{ "src": "images/h8LyJtMqjtGbd0dmiqo1AqH9pw4.png", "size": "full" }] },
+          { "img": [{ "src": "images/iZXzCEEU5UEHJ7FinV5zQBNCGI.png", "size": "full" }] },
+          { "img": [{ "src": "images/WxPH5g4WBspFEt9K0ZqN6P5eQw.png", "size": "half" }, { "src": "images/61Q0VZ8d1enHUhOSgOaxTGYTUs.png", "size": "half" }] }
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "Based on the project and assessment scope, I decided to implement the User Centered Design process for this project." },
+          { "img": [{ "src": "images/ZwBAtNq9qmKPUDGVRlwKJnCGw7w.png", "size": "full" }] }
+        ]},
+        { "heading": "Product Research Findings", "content": [
+          { "p": "Our research focused on understanding the needs and preferences of young people when it comes to banking services. Through surveys and interviews, we found that this demographic values simplicity, speed, and visually appealing interfaces, often feeling disconnected from the complex and outdated systems of traditional banks. Based on these insights, we tailored the app to provide a seamless and modern user experience, addressing their key pain points." },
+          { "ol": [
+            "Young users prefer simple, intuitive interfaces that are aesthetically pleasing.",
+            "Quick account setup and easy access to financial tools are essential.",
+            "Interest in peer-to-peer payments and social integrations for a community-driven experience."
+          ]}
+        ]},
+        { "heading": "Information Architecture & Wireframes", "content": [
+          { "img": [{ "src": "images/E3Ivpzgxz9qLZtd2RDCgRBdIB2Y.png", "size": "half" }, { "src": "images/OMMu6brIoKYwu2OODXi0IzpGYkg.jpg", "size": "half" }] }
+        ]},
+        { "heading": "Personas", "content": [
+          { "img": [{ "src": "images/yX5iSnmq0Xy5egVSYnmqQBY7ZM.png", "size": "full" }] },
+          { "img": [{ "src": "images/2bQrJnwazHFA1ZM6AmNoH7m0vg.png", "size": "full" }] }
+        ]},
+        { "heading": "Solution & Design", "content": [
+          { "img": [{ "src": "images/etNqazPte0GzEyf2Ou2OmJy1bg.png", "size": "full" }] },
+          { "img": [{ "src": "images/Buv04IYXMPDKR0MOgJ8ZcIjnPdc.png", "size": "full" }] },
+          { "img": [{ "src": "images/aIp3uCNoBTDcxvFVP0krcisDCU.png", "size": "full" }] },
+          { "img": [{ "src": "images/YIGwRa1J9SWeCtc1cpBYS0E60.png", "size": "third" }, { "src": "images/Q9HNMRKzVWI67zw2yub3TBd1Rc4.png", "size": "third" }, { "src": "images/wJgUcVMoQakDV5CUr0NSvmi0r8.png", "size": "third" }] },
+          { "video": "https://www.youtube.com/watch?v=rLx5XR6fmfo" }
+        ]},
+        { "heading": "Conclusion", "content": [
+          { "ul": [
+            "Testing the product multiple times during the process made me realise the importance of usability testing.",
+            "Working with an overwhelming number of options and styles was a bit challenging, but it further helped me improve my decision making.",
+            "All designs, including brand identity design, documentation and hi-fi UI were done in Figma; prototypes were done in ProtoPie, which also helped me sharpen my prototyping skills."
+          ]}
+        ]}
+      ]
+    },
+    {
+      "slug": "lura",
+      "title": "Lura VPN",
+      "summary": "Lura VPN is a Virtual Private Network that lets users browse the internet securely with the power of AI & machine learning.",
+      "tags": ["Security", "UI/UX", "Branding"],
+      "role": "Branding, Product design",
+      "date": "Nov 2023",
+      "contributors": "Best Omotayo",
+      "previewUrl": "https://luravpn.com",
+      "cover": "images/hiiML8ZNfTapMRL76FHgvYIpfZo.png",
+      "hero": "images/33Sj0IkgqI3RbHvugvxD0B5d4BU.png",
+      "sections": [
+        { "heading": "Problem", "content": [
+          { "p": "In today’s digital landscape, users increasingly rely on public networks, exposing them to risks like data breaches, identity theft, and geo-restrictions. However, many VPN solutions are either too complex for everyday users or compromise speed and reliability. There is a need for a user-friendly VPN application that seamlessly combines security, speed, and ease of use, ensuring users can protect their privacy and access content without technical challenges or interruptions." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "To design a product that is aesthetically pleasing and easy to use across different platforms, and an admin dashboard that allows administrators to manage the activities on the platform." }
+        ]},
+        { "heading": "Brand and Imagery Direction", "content": [
+          { "p": "The branding and imagery direction centers around the galaxy and space. This is a metaphorical representation of the internet and how vast it is." },
+          { "p": "In order to journey across the universe, one would need a space suit for protection. Lura is this protection, and so in most cases, Lura takes the shape and form of an astronaut in space protected by a space suit." },
+          { "img": [{ "src": "images/b7C15Yw1aAO2VnIT7gdWf5E0Ffw.png", "size": "full" }] },
+          { "img": [{ "src": "images/sthfaaQDDC6vcSnHpy6Mx8jDrNQ.png", "size": "half" }, { "src": "images/SWFDFbxEPU262FeuLA7AjV2uy0M.png", "size": "half" }] }
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "Based on the project and assessment scope, I decided to implement the User Centered Design process for this project." },
+          { "img": [{ "src": "images/ZwBAtNq9qmKPUDGVRlwKJnCGw7w.png", "size": "full" }] }
+        ]},
+        { "heading": "Research Findings", "content": [
+          { "ul": [
+            "User Pain Points: Several VPN apps on the market have overly complicated interfaces, making them challenging for non-technical users to navigate.",
+            "Multi-Device Support: With people using multiple devices, there is a demand for VPN apps that seamlessly work across smartphones, tablets, and laptops.",
+            "One-Click Connection: Users prefer minimal configurations, with features like automatic server selection and a single-click connection option.",
+            "Global Server Coverage: A diverse network of servers spread across multiple regions ensures fast connections and reliable access to geo-restricted content."
+          ]}
+        ]},
+        { "heading": "Design", "content": [
+          { "p": "The design focused on simplicity, accessibility, and performance. A minimalistic interface with a clean layout was crafted to reduce cognitive load, ensuring both novice and experienced users could easily navigate the app. Key features like one-click connection and automatic server selection were prioritized to streamline the user experience. The design also emphasized multi-device compatibility, ensuring a seamless experience across smartphones, tablets, and desktops, with consistent branding and UI elements." },
+          { "img": [{ "src": "images/bce2ycpSrl6h5aFq9gmT5Mw2QAE.png", "size": "full" }] },
+          { "img": [{ "src": "images/SVhg18AhugsLTYxLwL7zYE9vaM.png", "size": "half" }, { "src": "images/YJcCRYDds5hZxskUuVT8FwceyhQ.png", "size": "half" }] },
+          { "img": [{ "src": "images/tZ1F1F49SZyPaMTxNN7yRrYICec.png", "size": "full" }] },
+          { "img": [{ "src": "images/MkCrkjLMqAjfDAnsm0BBJVA0QNw.png", "size": "half" }, { "src": "images/pIob65jg1WYnFmnLoM0tMR3Aro.png", "size": "half" }] }
+        ]},
+        { "heading": "Outcome", "content": [
+          { "p": "By addressing user pain points such as complex interfaces and slow speeds, the app achieved a seamless onboarding process and high usability, leading to increased adoption and positive user feedback." },
+          { "p": "Features such as one-click connection and auto-server selection simplified the user journey, ensuring a smooth and enjoyable experience for all users." }
+        ]}
+      ]
+    },
+    {
+      "slug": "fcmb",
+      "title": "FCMB Business Banking",
+      "summary": "An assessment and remodel of the First City Monument Bank business banking system",
+      "tags": ["Banking", "UI/UX"],
+      "role": "UI/UX Design",
+      "date": "August 2023",
+      "contributors": "Best Omotayo",
+      "previewUrl": "https://www.fcmb.com/",
+      "cover": "images/7GmfBU1cCWSSikFToJfbva1z14c.png",
+      "hero": "images/Z7gcmHGEve630H0kmFJL2C16o9w.jpeg",
+      "sections": [
+        { "heading": "Background", "content": [
+          { "p": "The First City Monument Bank business banking platform allows users to gain access to a world of exclusive financial services and lifestyle." },
+          { "p": "It is a simple, convenient, and flexible way to manage your finances day to day." }
+        ]},
+        { "heading": "Problem", "content": [
+          { "p": "The bank developed an online banking platform to streamline operations for its business customers. However, due to poor design, customers preferred conducting transactions in person at branch locations rather than using the digital platform — ultimately undermining its intended purpose of providing convenient remote banking services." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "The goal is to redesign the internet banking platform to:" },
+          { "ul": [
+            "Align with industry best practices and user experience standards",
+            "Enhance core functionality to meet business customers' needs",
+            "Improve overall usability through intuitive navigation and workflows",
+            "Provide a seamless digital banking experience that encourages platform adoption"
+          ]}
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "Based on the project and assessment scope, I decided to implement the User Centered Design process for this assessment." },
+          { "p": "Why UCD? User centered design fine-tunes the details through iteration after it is in the users’ hands." }
+        ]},
+        { "heading": "Research and Analysis", "content": [
+          { "p": "In analyzing the usability of the platform, I made use of heuristic evaluation, which is the activity of using a set of guidelines (heuristics) to evaluate if an interface is user-friendly. By implementing Nielsen and Molich's 10 User Interface Design Heuristics, I was able to identify the problems with the interface and come up with implementable solutions to these problems." },
+          { "p": "Here are the 10 heuristics:" },
+          { "ol": [
+            "Visibility of System Status: Keep users informed about what's happening in real-time through appropriate feedback.",
+            "Match Between System and Real World: Use language and concepts familiar to users, not technical jargon.",
+            "User Control and Freedom: Provide clear ways to undo actions and exit unwanted states.",
+            "Consistency and Standards: Maintain consistent conventions and standards throughout the interface.",
+            "Error Prevention: Design interfaces that prevent errors before they occur.",
+            "Recognition Rather Than Recall: Make options visible and easily accessible rather than requiring users to remember information.",
+            "Flexibility and Efficiency of Use: Support both novice and expert users with flexible ways to complete tasks.",
+            "Aesthetic and Minimalist Design: Include only relevant information to maintain clarity and focus.",
+            "Help Users Recognize, Diagnose, and Recover from Errors: Present error messages in plain language with clear solutions.",
+            "Help and Documentation: Provide easily searchable, task-focused help documentation when needed."
+          ]},
+          { "img": [{ "src": "images/OckTb65h9ihLR05PU5mCbW80.png", "size": "full" }] }
+        ]},
+        { "heading": "Identified Problems", "content": [
+          { "p": "These are the problems that were discovered with the dashboard based on the heuristic evaluation:" },
+          { "ul": [
+            "By showing the user profile instead of just a sign-out button, users can easily know which profile is currently logged in (in case the user has multiple profiles).",
+            "Changing the text to wording the user is already familiar with can reduce decision-making time or help them make the right decisions.",
+            "Users are used to having documentation, help or contact buttons outside of the main actions, most likely below the screen or on separate pages entirely.",
+            "Staying consistent by using the right icons, alerts and accents across the whole platform.",
+            "Using proper font size, color and contrast to show hierarchy for active text, subtext and disabled text.",
+            "Giving users a quick-link section where the most used functionalities are grouped helps them navigate easily.",
+            "Using chunking and grouping to emphasise key information and reduce clutter.",
+            "Using simpler icons with consistent styling lets users identify selections faster. 3D multicoloured icons are hard to memorise and can lead to recall issues, especially with similar icons."
+          ]},
+          { "img": [{ "src": "images/IvyxVDbvTUKc2O6ayT5zpzFlFM.png", "size": "half" }] },
+          { "img": [{ "src": "images/fvbdLkQTjQPPG83JKOTT0qLuX94.png", "size": "full" }] }
+        ]},
+        { "heading": "Outcome", "content": [
+          { "p": "Fewer business transactions were being conducted in the branches, and more transactions and actions were being done on the platform." }
+        ]}
+      ]
+    },
+    {
+      "slug": "heirs-life",
+      "title": "Heirs Life",
+      "summary": "A redesign of the Heirs Life mobile app",
+      "tags": ["Insurance", "UI/UX"],
+      "role": "UI/UX Design",
+      "date": "November 2023",
+      "contributors": "Best Omotayo",
+      "cover": "images/Hg9fNNrPZvEMrsIA6iUhZNaLgJU.png",
+      "hero": "images/dRnJJzimjHUCWiM6IrxCcYrV4b8.jpg",
+      "sections": [
+        { "heading": "Background", "content": [
+          { "p": "Heirs Holdings is the biggest insurance company in West Africa, with portfolios ranging from insurance-backed savings plans to life insurance security for individuals, families, children's education, debtors, creditors, entrepreneurs, and employees." },
+          { "p": "Heirs Life Assurance is a subsidiary of Heirs Holdings, a pan-African investment group with presence in 24 countries across 4 continents." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "The product focus is to provide:" },
+          { "ul": ["Access to insurance products", "A simple and seamless user experience", "Other value-added services"] }
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "Based on the project and assessment scope, I decided to implement the User Centered Design process for this assessment." },
+          { "p": "Why UCD? User centered design fine-tunes the details through iteration after it is in the users’ hands." },
+          { "img": [{ "src": "images/ZwBAtNq9qmKPUDGVRlwKJnCGw7w.png", "size": "full" }] }
+        ]},
+        { "heading": "Research and Analysis", "content": [
+          { "p": "During user interviews and surveys, we discovered that about 90% of the feedback from users focused on the app being too disorganized, uninteresting to look at and lacking beauty. This led us to narrow our design objectives to improving the overall look and feel of the app and keeping the interface as simple as possible." },
+          { "img": [{ "src": "images/FqWA6EBXXi92Gu4fcludY83ONkA.png", "size": "full" }] }
+        ]},
+        { "heading": "Project Timeline", "content": [
+          { "img": [{ "src": "images/Cq9O8AgkjXvKzVR3n7Jmes6uLQ.png", "size": "full" }] }
+        ]},
+        { "heading": "User Flows", "content": [
+          { "p": "Before doing the high-fidelity designs, I had sessions with the stakeholders and the product team, and came up with user flows for each functionality and wireframes, which helped during the ideation process to refine our ideas before going into high-fidelity designs." },
+          { "img": [{ "src": "images/CSu5IItWb89IsIgidFbS2kvvAo.png", "size": "full" }] }
+        ]},
+        { "heading": "Solutions & Designs", "content": [
+          { "p": "Based on the user feedback, which highlighted concerns about the app feeling disorganized and visually unappealing, I focused our design objectives on improving the overall aesthetics and simplifying the interface. I streamlined the layout to reduce visual noise, using a clean and minimal design to create a more engaging and user-friendly experience." },
+          { "img": [{ "src": "images/RT25vyT6elUgNiFuCy6FI8P8.png", "size": "full" }] },
+          { "img": [{ "src": "images/iUz1jEGQBmPLzJra3pqeQKxng.png", "size": "full" }] },
+          { "img": [{ "src": "images/R9zKGSKibcsVrxhZW6SwpA47fUg.png", "size": "full" }] },
+          { "img": [{ "src": "images/rCYxz3QDDoujLRjZRb77iL9x7q4.png", "size": "half" }, { "src": "images/ulkpwbCwh4bF5n0cs0X4hCto9w.png", "size": "half" }] },
+          { "img": [{ "src": "images/EK66Qu77Dvwsgz4o36gCGRXXpPY.png", "size": "full" }] }
+        ]},
+        { "heading": "Outcome", "content": [
+          { "p": "By addressing user pain points such as complex interfaces and slow speeds, the app achieved a seamless onboarding process and high usability, leading to increased adoption and positive user feedback." },
+          { "p": "Features such as one-click connection and auto-server selection simplified the user journey, ensuring a smooth and enjoyable experience for all users." }
+        ]}
+      ]
+    },
+    {
+      "slug": "aladdin",
+      "title": "Aladdin Digital Bank",
+      "summary": "Aladdin is the first ecosystem bank designed to support SMBs, gig workers and individuals with a side hustle with all the tools they need to thrive — financial tools, a marketplace and an active community designed to support them and grow their network.",
+      "tags": ["Fintech/Banking", "UI/UX", "Branding"],
+      "role": "Branding, Product design",
+      "date": "Nov 2023",
+      "contributors": "Best Omotayo",
+      "previewUrl": "https://www.aladdin.ng/",
+      "cover": "images/GcOrr9MW0zvG7qjojdPdAjmHfLs.png",
+      "hero": "images/j2Dz2h3XabKd07nwHsBVgbRcnkE.png",
+      "sections": [
+        { "heading": "Problem", "content": [
+          { "p": "Small and medium-sized businesses (SMBs), gig workers, and individuals with side hustles often face challenges accessing the comprehensive financial tools and support needed to grow their ventures. Traditional banks tend to overlook this demographic, offering limited services that don’t cater to their unique needs, such as flexible payment solutions, marketplace access, or community support. Without these essential resources, they struggle to scale. Aladdin aims to fill this gap by providing an ecosystem specifically designed to empower this segment through loans, savings, payments, and a supportive marketplace." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "To build a platform where users can bank and buy — seamlessly mixing a marketplace and financial tools together in one product." }
+        ]},
+        { "heading": "Branding Problem & Solution", "content": [
+          { "p": "The major challenge in developing this project was overcoming the bias associated with the product’s name. Drawing from a well-known Disney musical fantasy, \"Aladdin,\" many people initially perceived the brand as catering specifically to Muslims due to its previous Arabic/Islamic tone, despite its presence in the Nigerian fintech space for about a year. This led to a misconception that the brand was not meant for all Nigerians. The task was to redefine the brand identity to be inclusive and accessible to everyone, regardless of religion or race." },
+          { "p": "After careful analysis, the solution was to create a new brand identity that is simple, modern, and memorable — one that resonates with people from diverse ideologies, races, and religions, ensuring no one feels excluded or that the brand leans toward a specific group." },
+          { "img": [{ "src": "images/Nr5Y8CNI3OpnJy8muCu7rzhEw4.png", "size": "half" }, { "src": "images/5BP0WZ1sYY7WzOAv3I86IOjQE.png", "size": "half" }] },
+          { "img": [{ "src": "images/bLkfgVj0nvPV4hbQaaPl9N8q8CI.png", "size": "full" }] },
+          { "img": [{ "src": "images/EVcKhHAdtjR2xqJA4HHiY2xdVI.png", "size": "half" }, { "src": "images/YHgsqya2nszRmpQhGUxglB4Gk.png", "size": "half" }] }
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "Based on the project and assessment scope, I decided to implement the User Centered Design process for this project." },
+          { "img": [{ "src": "images/ZwBAtNq9qmKPUDGVRlwKJnCGw7w.png", "size": "full" }] }
+        ]},
+        { "heading": "Research", "content": [
+          { "p": "I conducted qualitative research to capture data from actual users on what they thought and what they would love to see. I based my questions on what they thought about the brand’s name, logo, and the product idea. I went further to ask if they would use this type of product if it was available, and what features they would love to see and use." },
+          { "h": "These are some of the questions I asked:" },
+          { "ul": [
+            "What are your favourite banking apps?",
+            "What are the favourite features you would like to have on a banking app?",
+            "Do you prefer to use a digital bank or a commercial bank?",
+            "Do you buy online?",
+            "What are your best and worst experiences with online shopping?",
+            "What are your thoughts about social media vending such as Instagram, Facebook, WhatsApp, Twitter?",
+            "Using Instagram as a sample, walk me through the process of buying an item on Instagram.",
+            "What do you like about this process?",
+            "What would you change about this process?",
+            "Of all the different means of payment, what do you think about payment on delivery?",
+            "What do you understand about the escrow payment system?",
+            "Would you rather use escrow payment or payment on delivery?"
+          ]}
+        ]},
+        { "heading": "User Pain Points & Insights", "content": [
+          { "img": [{ "src": "images/WyuruFDLKoFbzPd4n4li1oeQZx8.png", "size": "full" }] }
+        ]},
+        { "heading": "Research Summary", "content": [
+          { "ul": [
+            "Users are enthusiastic about the idea of integrating finance and e-commerce but remain skeptical about the security of transactions, especially with concerns over fake vendors.",
+            "Buyers and sellers desire increased trust and security, suggesting the need for verified sellers with real identification and protection, such as insurance on orders.",
+            "There is frustration with the fragmented process of shopping on one platform and paying on another, leading to a demand for a seamless, integrated experience."
+          ]}
+        ]},
+        { "heading": "Solutions & Designs", "content": [
+          { "p": "At this stage I started to bring my insights to life. I played back the interview recordings and wrote down everything each participant said. My main goal was to create an all-round solution that resolves the existing issues." },
+          { "p": "I used this to create user needs and made sure they were in tandem with the stakeholders' needs as well, to create a fit between what the users want and what the owner wants." },
+          { "img": [{ "src": "images/iud7292DqbjF2Cs04ZKpWKZxck.png", "size": "full" }] },
+          { "img": [{ "src": "images/B3GCfOWgvCpnGL41HHXxGdJzEU.png", "size": "half" }, { "src": "images/YDZC2b2FZ8Kr7ntXxPQUzLJhI.png", "size": "half" }] },
+          { "img": [{ "src": "images/8UX0IykktwZzp7n3cdvPpGIZQk.png", "size": "full" }] },
+          { "img": [{ "src": "images/BW9G3dnllLGLJwRU9Iy75IRo.png", "size": "third" }, { "src": "images/fQJhCjtpFaXlSUSS6XpUukQ2nr4.png", "size": "third" }, { "src": "images/H8oRMYbRFfuWFg3iODSsUjnPaA.png", "size": "third" }] },
+          { "img": [{ "src": "images/Bv3NCW9KocMrO6PaJrlGsWrIp8.png", "size": "full" }] },
+          { "img": [{ "src": "images/VDFlxJHejSylZXaHmxmBxNHXQ.png", "size": "full" }] }
+        ]},
+        { "heading": "Outcome", "content": [
+          { "ul": [
+            "50K+ downloads on the Google Play Store",
+            "10K+ downloads on the Apple App Store",
+            "Raised $278,790 on Wefunder, an investment crowdfunding platform"
+          ]},
+          { "links": [
+            { "label": "Google Play", "url": "https://play.google.com/store/apps/details?id=com.aladdin.digital&hl=en&gl=US" },
+            { "label": "App Store", "url": "https://apps.apple.com/ng/app/aladdin-digital/id1604858307" },
+            { "label": "Wefunder", "url": "https://wefunder.com/aladdin" }
+          ]}
+        ]}
+      ]
+    },
+    {
+      "slug": "fern",
+      "title": "FERN — Payment Gateway",
+      "summary": "An assessment and remodel of the FERN payment gateway",
+      "tags": ["Fintech", "UI/UX", "Branding"],
+      "role": "UI/UX Design",
+      "date": "August 2023",
+      "contributors": "Best Omotayo",
+      "previewUrl": "https://fernng.com/demo-store",
+      "cover": "images/JKA8PMZsj2QEPyfHZ4gN7tEFvc.jpg",
+      "hero": "images/JKA8PMZsj2QEPyfHZ4gN7tEFvc.jpg",
+      "sections": [
+        { "heading": "Background", "content": [
+          { "p": "FERN Payment Gateway is an online transaction platform designed to facilitate seamless payments for businesses and customers. The existing gateway, however, was plagued by slow transaction processing, a cluttered user interface, and insufficient communication of available payment options. These challenges significantly impacted user retention, led to abandoned transactions, and ultimately resulted in financial losses for the company." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "The primary objectives were to:" },
+          { "ul": [
+            "Improve transaction processing time.",
+            "Simplify the user interface for better accessibility and navigation.",
+            "Clearly showcase all available payment options to enhance user awareness and choice.",
+            "Increase successful transaction rates and reduce user drop-offs."
+          ]}
+        ]},
+        { "heading": "Design Process", "content": [
+          { "p": "The design process followed a user-centered approach:" },
+          { "ol": [
+            "Discovery: Conducted stakeholder interviews to understand business needs and user pain points.",
+            "Research: Performed user research, competitive analysis, and usability testing on the existing platform.",
+            "Ideation: Created low-fidelity wireframes to explore various design solutions.",
+            "Prototyping: Developed high-fidelity prototypes for user testing.",
+            "Testing: Conducted multiple rounds of usability testing to refine the solution.",
+            "Implementation: Collaborated with developers to ensure seamless integration of the design updates."
+          ]},
+          { "img": [{ "src": "images/ZwBAtNq9qmKPUDGVRlwKJnCGw7w.png", "size": "full" }] }
+        ]},
+        { "heading": "Research and Analysis", "content": [
+          { "ul": [
+            "User Feedback: Interviews with frequent users revealed frustration with long loading times, confusing navigation, and lack of visibility for payment options.",
+            "Competitor Analysis: Studied successful payment gateways like Stripe and PayPal to identify best practices in speed, usability, and payment option visibility.",
+            "Data Analysis: Metrics showed a 60% drop-off rate during the payment stage and a significant percentage of users unaware of alternative payment options such as bank transfer or USSD payment."
+          ]},
+          { "img": [{ "src": "images/nVX7piMsu4tboiHENu4vaQgYqoc.png", "size": "full" }] }
+        ]},
+        { "heading": "Solutions", "content": [
+          { "ul": [
+            "Intuitive Design: Introduced a clean and minimalistic interface with clear visual hierarchies to enhance navigation and usability.",
+            "Payment Option Visibility: Designed a dedicated payment options section with icons and concise descriptions for each method.",
+            "Progress Indicators: Added a progress bar to keep users informed about their transaction status, reducing anxiety and improving user trust.",
+            "Mobile Responsiveness: Ensured the gateway was fully optimized for mobile devices, catering to the increasing number of mobile users.",
+            "Personalized Touch: Incorporated smart recommendations for payment options based on user history and transaction value."
+          ]},
+          { "img": [{ "src": "images/kRkFAIGQSbZPgYDbvI1ddUxnM.png", "size": "full" }] },
+          { "img": [{ "src": "images/f2axoX4VoKbZkEGuFwWwqPZG85A.png", "size": "half" }, { "src": "images/TgAnYr6Gq4CYueZ0bwmyYlizrI.png", "size": "half" }] }
+        ]},
+        { "heading": "Outcome", "content": [
+          { "p": "By addressing user pain points such as complex interfaces and slow speeds, the app achieved a seamless onboarding process and high usability, leading to increased adoption and positive user feedback." },
+          { "p": "Features such as one-click connection and auto-server selection simplified the user journey, ensuring a smooth and enjoyable experience for all users." }
+        ]}
+      ]
+    },
+    {
+      "slug": "figma",
+      "title": "Figma Preview Feature",
+      "summary": "A UI/UX case study on the presentation feature of Figma and Figma Mirror",
+      "tags": ["SaaS", "UI/UX"],
+      "role": "Product design",
+      "date": "March 2023",
+      "contributors": "Best Omotayo",
+      "cover": "images/5sbMeQlVZhsfDcE1OArcegpe4Hw.png",
+      "hero": "images/QT4aDYkMPpKgOmuFpD7xFeSAmGg.webp",
+      "sections": [
+        { "heading": "Problem", "content": [
+          { "p": "The primary issue with Figma’s current Present feature is that it requires designers to switch tabs every time they want to preview their designs. This constant back-and-forth not only disrupts the workflow but also significantly reduces productivity. For users with slower or average internet speeds, the preview page can take additional time to load, further hindering efficiency. This process creates unnecessary friction, making it difficult for designers to seamlessly review and iterate on their work in real time." }
+        ]},
+        { "heading": "Goals and Objectives", "content": [
+          { "p": "What if I can’t use my mobile phone at the moment, or I just want to design and preview side by side on the same screen without opening a new tab? That’s exactly the problem I’m aiming to solve. So, let’s dive into how we addressed this issue in the redesign." }
+        ]},
+        { "heading": "Research and Ideation", "content": [
+          { "p": "I got some inspiration from current collaboration, prototyping and development software that allows preview while working — some of which are ProtoPie, VS Code and Haiku." },
+          { "img": [{ "src": "images/PjEeJdABtCqf1tXXZTZV5lqltY.png", "size": "full" }] }
+        ]},
+        { "heading": "Previous Design", "content": [
+          { "p": "The design below is a screenshot of the current Present feature on Figma." },
+          { "img": [{ "src": "images/auRBR45EF6yqTkGfv0wzbk2ztjE.png", "size": "full" }] }
+        ]},
+        { "heading": "Redesign", "content": [
+          { "p": "The design below is a redesign of the present button in Figma that would allow designers to preview their design right on the Figma board, without opening a separate tab in their browser unless they choose to." },
+          { "img": [{ "src": "images/pnHfcpnIQqqotLiwWGB9ABpu8V8.png", "size": "full" }] },
+          { "p": "When users click on device preview they get a live preview of the current artboard they are working on and can see their designs live, as they are being created, without switching tabs and losing their design flow." },
+          { "p": "They also have the option of minimizing, maximizing (which takes it to full-screen mode in another tab), or closing the preview. Designers can also change device type and device color from the settings icon on the device preview toolbar." },
+          { "img": [{ "src": "images/zvM2n7BIZ9CVjVgAZuv3RJfc.png", "size": "full" }] }
+        ]},
+        { "heading": "Conclusion", "content": [
+          { "p": "P.S. Six months later, Figma launched the new Figma Mirror feature. Mission accomplished!" }
+        ]}
+      ]
+    }
+  ]
+}

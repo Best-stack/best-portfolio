@@ -1,0 +1,39 @@
+name: Migrate from Framer
+
+# Run manually from the Actions tab: downloads every image from Framer,
+# uploads it to Sanity and creates all pages. Safe to run more than once.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (check setup, write nothing)'
+        type: boolean
+        default: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Remembers which images are already uploaded, so re-runs don't duplicate them
+      - uses: actions/cache@v4
+        with:
+          path: .migration-cache.json
+          key: migration-cache-${{ github.run_id }}
+          restore-keys: migration-cache-
+
+      - name: Migrate
+        run: npm run ${{ inputs.dry_run && 'migrate:dry' || 'migrate' }}
+        env:
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}
