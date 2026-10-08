@@ -265,7 +265,7 @@ a:hover { opacity: 0.7; }
 }
 
 /* ---------- Work grid (video tiles) ---------- */
-.work-grid-wrap { padding: 0 var(--gutter); }
+.work-grid-wrap { padding-left: var(--gutter); padding-right: var(--gutter); }
 .work-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
