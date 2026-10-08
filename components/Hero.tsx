@@ -31,8 +31,12 @@ export function Hero({ portrait, marqueeText, roles, settings, gridSize = 22, st
   useEffect(() => {
     const canvas = canvasRef.current
     const hero = heroRef.current
-    const src = imgSrc(portrait, 2400)
-    if (!canvas || !hero || !src) return
+    if (!canvas || !hero || !portrait?.url) return
+    // WebGL can only read images it is allowed to, so load the portrait through this site's own
+    // image endpoint (same origin) instead of directly from the Sanity/Framer CDN.
+    const src = portrait.url.startsWith('/')
+      ? portrait.url
+      : `/_next/image?url=${encodeURIComponent(portrait.url)}&w=2048&q=85`
 
     const gl = canvas.getContext('webgl', { premultipliedAlpha: false, antialias: false })
     if (!gl) return // the <img> fallback below stays visible
