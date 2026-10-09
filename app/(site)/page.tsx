@@ -34,14 +34,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section id="work" className="works work-grid-wrap">
-        <div className="works__head">
-          <div className="label">(Featured)</div>
-          <h2 className="display">
-            Selected
-            <br />
-            works
-          </h2>
+      <section id="work" className="shots wrap-wide">
+        <div className="shots__head">
+          <h2>Selected works</h2>
+          <div className="label">({projects.length} case studies)</div>
         </div>
         <WorkGrid projects={projects} />
       </section>

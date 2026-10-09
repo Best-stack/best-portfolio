@@ -12,14 +12,10 @@ export default async function WorkPage() {
   return (
     <>
       <SiteHeader settings={settings} current="work" />
-      <section className="page-top work-grid-wrap">
-        <div className="works__head">
+      <section className="shots wrap-wide">
+        <div className="shots__head">
+          <h1>Selected works</h1>
           <div className="label">({projects.length} case studies)</div>
-          <h1 className="display">
-            Selected
-            <br />
-            works
-          </h1>
         </div>
         <WorkGrid projects={projects} />
       </section>

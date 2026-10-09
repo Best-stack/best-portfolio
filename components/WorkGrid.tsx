@@ -6,13 +6,13 @@ import { imgSrc } from '@/lib/img'
 import type { ProjectCard } from '@/lib/types'
 
 /**
- * Tight grid of tiles. Each tile loops its card video silently while on screen
- * (paused off-screen to save battery), with the card image as poster/fallback.
- * Title and tags slide up on hover.
+ * Selected works, styled like the Shots section: rounded media with a caption below.
+ * Each tile loops its card video silently while on screen (paused off-screen),
+ * with the card image as poster/fallback.
  */
 export function WorkGrid({ projects }: { projects: ProjectCard[] }) {
   return (
-    <div className="work-grid">
+    <div className="shots__grid">
       {projects.map((p, i) => (
         <Tile key={p.slug} project={p} eager={i < 4} />
       ))}
@@ -41,29 +41,32 @@ function Tile({ project, eager }: { project: ProjectCard; eager: boolean }) {
   const poster = imgSrc(project.cover, 1200)
 
   return (
-    <a className="tile" href={`/work/${project.slug}`}>
-      {project.video ? (
-        <video
-          ref={videoRef}
-          className="tile__media"
-          src={project.video}
-          poster={poster}
-          muted
-          loop
-          playsInline
-          preload={eager ? 'auto' : 'metadata'}
-          aria-hidden="true"
-        />
-      ) : (
-        poster && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img className="tile__media" src={poster} alt="" loading={eager ? 'eager' : 'lazy'} />
-        )
-      )}
-      <div className="tile__info">
-        <h3>{project.title}</h3>
-        {project.tags.length > 0 && <p>{project.tags.join(' · ')}</p>}
-      </div>
+    <a className="work-tile" href={`/work/${project.slug}`}>
+      <figure style={{ margin: 0, display: 'contents' }}>
+        <div className="work-tile__media">
+          {project.video ? (
+            <video
+              ref={videoRef}
+              src={project.video}
+              poster={poster}
+              muted
+              loop
+              playsInline
+              preload={eager ? 'auto' : 'metadata'}
+              aria-hidden="true"
+            />
+          ) : (
+            poster && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={poster} alt="" loading={eager ? 'eager' : 'lazy'} />
+            )
+          )}
+        </div>
+        <figcaption>
+          <span>{project.title}</span>
+          {project.tags.length > 0 && <span>{project.tags.join(' · ')}</span>}
+        </figcaption>
+      </figure>
     </a>
   )
 }
