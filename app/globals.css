@@ -278,3 +278,8 @@ a:hover { opacity: 0.7; }
 .work-tile figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 17px; font-weight: 600; }
 .work-tile figcaption span + span { font-weight: 500; color: var(--muted); text-align: right; }
 .work-tile:hover figcaption span:first-child { text-decoration: underline; text-underline-offset: 4px; }
+.work-grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.work-tile figcaption span { white-space: nowrap; }
+.work-tile figcaption span + span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 1000px) { .work-grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .work-grid--3 { grid-template-columns: 1fr; } }

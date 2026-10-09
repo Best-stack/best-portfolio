@@ -12,7 +12,7 @@ import type { ProjectCard } from '@/lib/types'
  */
 export function WorkGrid({ projects }: { projects: ProjectCard[] }) {
   return (
-    <div className="shots__grid">
+    <div className="shots__grid work-grid--3">
       {projects.map((p, i) => (
         <Tile key={p.slug} project={p} eager={i < 4} />
       ))}
