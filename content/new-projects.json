@@ -1,0 +1,177 @@
+{
+  "mediaBase": "content/media/",
+  "projects": [
+    {
+      "slug": "uvs-games",
+      "title": "UVS Games",
+      "summary": "A redesign of UVS Games — home of the UniVersus card game — with a new navigation, homepage and organized-play experience.",
+      "tags": ["Gaming", "Web Design", "UI/UX"],
+      "scope": ["Navigation & mega menu", "Homepage redesign", "Mobile navigation", "Organized Play pages", "Design system"],
+      "role": "UI/UX Design",
+      "date": "2025",
+      "contributors": "Anyday",
+      "previewUrl": "https://uvsgames.com",
+      "cover": "uvs-games/cover.jpg",
+      "hero": "uvs-games/hero.jpg",
+      "cardVideo": "uvs-games/mega-menu.mp4",
+      "sections": [
+        { "heading": "Before → After", "content": [
+          { "compare": { "before": "uvs-games/before-home.jpg", "after": "uvs-games/after-home.jpg", "beforeLabel": "Before", "afterLabel": "Redesign", "caption": "Homepage — drag to compare" } },
+          { "compare": { "before": "uvs-games/before-mobile.jpg", "after": "uvs-games/after-mobile.jpg", "beforeLabel": "Before", "afterLabel": "Redesign", "layout": "narrow", "caption": "Mobile homepage" } }
+        ]},
+        { "heading": "The problem", "content": [
+          { "p": "UVS publishes several games — UniVersus, Riftbound and Star Trek: Star Realms — but the old site hid them behind a long text menu, and the homepage was a single banner followed by a newsletter form. Players had no clear path to events, card lists or stores." }
+        ]},
+        { "heading": "A navigation built around games", "content": [
+          { "p": "Games, Discover and Hub are grouped in one mega menu, with live artwork for the game you hover." },
+          { "video": { "src": "uvs-games/mega-menu.mp4", "caption": "Desktop mega menu prototype" } },
+          { "video": { "src": "uvs-games/mobile-nav.mp4", "layout": "narrow", "caption": "Mobile navigation — collapsible groups and a persistent shop button" } }
+        ]},
+        { "heading": "A homepage that does the work", "content": [
+          { "ul": [
+            "Every game gets its own card with \"Explore game\" and \"Find a store\"",
+            "Latest news and upcoming events sit right on the homepage",
+            "Organized play for each game has its own banner and CTA"
+          ]},
+          { "img": [{ "src": "uvs-games/home-full.jpg", "size": "full" }] }
+        ]},
+        { "heading": "Live on uvsgames.com", "content": [
+          { "img": [{ "src": "uvs-games/mobile.jpg", "size": "full" }] }
+        ]}
+      ]
+    },
+    {
+      "slug": "aeon",
+      "title": "Aeon Health & Shop",
+      "summary": "A new website for a Calgary longevity clinic, with a guided 'Start here' flow — plus an online shop for its supplements.",
+      "tags": ["Health", "Web Design", "E-commerce"],
+      "scope": ["Website redesign", "Information architecture", "Start-here quiz & booking", "Navigation by goal", "Aeon Shop"],
+      "role": "UI/UX Design",
+      "date": "2025",
+      "contributors": "Anyday",
+      "previewUrl": "https://aeonfuturehealth.com",
+      "cover": "aeon/cover.jpg",
+      "hero": "aeon/hero.jpg",
+      "sections": [
+        { "heading": "Before → After", "content": [
+          { "compare": { "before": "aeon/before-home.jpg", "after": "aeon/after-home.jpg", "beforeLabel": "Before", "afterLabel": "Redesign", "caption": "Homepage hero" } },
+          { "compare": { "before": "aeon/before-about.jpg", "after": "aeon/after-about.jpg", "beforeLabel": "Before", "afterLabel": "Redesign", "caption": "Second section — from mission statement to the patient's story" } }
+        ]},
+        { "heading": "The problem", "content": [
+          { "p": "The old site listed every program in one long dropdown and didn't give new visitors an obvious first step. The redesign leads with how people feel, then guides them to one." }
+        ]},
+        { "heading": "A clear first step", "content": [
+          { "p": "\"Start here\" lets visitors book a free consult straight away, or take a 5-question quiz that recommends a program." },
+          { "img": [{ "src": "aeon/start-here.jpg", "size": "half" }, { "src": "aeon/quiz.jpg", "size": "half" }] }
+        ]},
+        { "heading": "Navigation by goal", "content": [
+          { "p": "Programs and therapies are grouped by what the patient wants — feel better, prevent, recharge — instead of by clinic jargon." },
+          { "img": [{ "src": "aeon/menu.jpg", "size": "full" }] },
+          { "img": [{ "src": "aeon/mobile-menu.jpg", "size": "half" }, { "src": "aeon/home-full.jpg", "size": "half" }] }
+        ]},
+        { "heading": "Aeon Shop", "content": [
+          { "p": "A companion store for Aeon's supplements: collections by need, quick-add flavours, and subscribe-and-save on every product page." },
+          { "img": [{ "src": "aeon/shop-home.jpg", "size": "half" }, { "src": "aeon/shop-product.jpg", "size": "half" }] }
+        ]}
+      ]
+    },
+    {
+      "slug": "aaif",
+      "title": "Agentic AI Foundation",
+      "summary": "The website for the Agentic AI Foundation — the Linux Foundation home of MCP, goose and AGENTS.md — rebuilt around projects, events and community.",
+      "tags": ["AI", "Web Design", "UI/UX"],
+      "scope": ["Homepage", "AAIF Landscape", "Events & map view", "Chatbot search", "Mobile layouts"],
+      "role": "UI/UX Design",
+      "date": "2026",
+      "contributors": "Anyday",
+      "previewUrl": "https://aaif.io",
+      "cover": "aaif/cover.jpg",
+      "hero": "aaif/hero.jpg",
+      "sections": [
+        { "heading": "Before → After", "content": [
+          { "compare": { "before": "aaif/before-mobile.jpg", "after": "aaif/after-mobile.jpg", "beforeLabel": "Launch site", "afterLabel": "Today", "layout": "narrow", "caption": "aaif.io on mobile — the December 2025 launch site vs. the live redesign" } }
+        ]},
+        { "heading": "The problem", "content": [
+          { "p": "The launch site introduced the foundation. The redesign turns it into a hub people come back to — for projects, events and community." }
+        ]},
+        { "heading": "AAIF Landscape", "content": [
+          { "p": "A filterable directory of agentic AI projects, grouped by application and capability." },
+          { "img": [{ "src": "aaif/landscape.jpg", "size": "full" }] }
+        ]},
+        { "heading": "Events, on a map", "content": [
+          { "p": "Foundation events, community events and groups — browsable as a grid, a calendar or a map." },
+          { "img": [{ "src": "aaif/events.jpg", "size": "full" }] }
+        ]},
+        { "heading": "Ask the site", "content": [
+          { "p": "The hero search opens a chatbot for questions like \"Any upcoming events in Toronto?\"" },
+          { "img": [{ "src": "aaif/chatbot.jpg", "size": "full" }] }
+        ]},
+        { "heading": "The homepage", "content": [
+          { "img": [{ "src": "aaif/home-full.jpg", "size": "full" }] }
+        ]}
+      ]
+    },
+    {
+      "slug": "oxy",
+      "title": "Oxy Acne Care",
+      "summary": "A new store for Oxy Acne Care — a bold, Gen-Z rebrand built around \"For every kind of -ne\".",
+      "tags": ["Skincare", "E-commerce", "Web Design"],
+      "scope": ["Homepage", "Hero system by acne type", "Mega menus", "Product cards", "Email sign-up pop-ups"],
+      "role": "UI/UX Design",
+      "date": "2024",
+      "contributors": "Anyday",
+      "previewUrl": "https://oxyacnecare.com",
+      "cover": "oxy/cover.jpg",
+      "hero": "oxy/hero.jpg",
+      "sections": [
+        { "heading": "Before → After", "content": [
+          { "compare": { "before": "oxy/before-mobile.jpg", "after": "oxy/after-mobile.jpg", "beforeLabel": "Before · 2024", "afterLabel": "Redesign", "layout": "narrow", "caption": "oxyskincare.com (archived, May 2024) vs. oxyacnecare.com today" } }
+        ]},
+        { "heading": "The problem", "content": [
+          { "p": "The old Oxy site was a straightforward product catalogue. The relaunch needed a voice as bold as the new brand — and an easier way to shop by acne type." }
+        ]},
+        { "heading": "One hero, three acne types", "content": [
+          { "p": "The hero splits into Mild, Stubborn and All Acne — each panel opens its own message and products. The mega menus follow the same shop-by-concern logic." },
+          { "img": [{ "src": "oxy/hero-states.jpg", "size": "half" }, { "src": "oxy/mega-menus.jpg", "size": "half" }] }
+        ]},
+        { "heading": "The homepage", "content": [
+          { "img": [{ "src": "oxy/home-full.jpg", "size": "full" }] }
+        ]},
+        { "heading": "Live on oxyacnecare.com", "content": [
+          { "img": [{ "src": "oxy/mobile.jpg", "size": "full" }] }
+        ]}
+      ]
+    },
+    {
+      "slug": "loop",
+      "title": "Loop Tag",
+      "summary": "Brand site and app for Loop Tag — QR tags that let anyone return a lost item without either person sharing personal details.",
+      "tags": ["Product", "Mobile App", "Web Design"],
+      "scope": ["Landing page", "Waitlist → store launch", "iOS app: owner & finder flows", "How it works page"],
+      "role": "Product & UI Design",
+      "date": "2026",
+      "contributors": "Anyday",
+      "previewUrl": "https://looptag.co",
+      "cover": "loop/cover.jpg",
+      "hero": "loop/hero.jpg",
+      "sections": [
+        { "heading": "V1 → Shipped", "content": [
+          { "compare": { "before": "loop/before-home.jpg", "after": "loop/after-home.jpg", "beforeLabel": "Waitlist V1", "afterLabel": "Live site", "caption": "From a pre-launch waitlist page to the live store" } }
+        ]},
+        { "heading": "The idea", "content": [
+          { "p": "Attach a tag, someone scans it, and you chat privately — no phone number, email or address shared. The site and app both had to make that promise obvious in seconds." }
+        ]},
+        { "heading": "The app", "content": [
+          { "p": "Two flows: owners activate and manage tags; finders scan and message without signing up." },
+          { "img": [{ "src": "loop/app.jpg", "size": "full" }] }
+        ]},
+        { "heading": "How it works page", "content": [
+          { "img": [{ "src": "loop/how-it-works.jpg", "size": "full" }] }
+        ]},
+        { "heading": "Live on looptag.co", "content": [
+          { "img": [{ "src": "loop/home-full.jpg", "size": "half" }, { "src": "loop/live-mobile.jpg", "size": "half" }] }
+        ]}
+      ]
+    }
+  ]
+}

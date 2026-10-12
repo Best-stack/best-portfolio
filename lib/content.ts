@@ -3,6 +3,7 @@ import 'server-only'
 import type { PortableTextBlock } from '@portabletext/react'
 import { createClient } from 'next-sanity'
 
+import newProjects from '@/content/new-projects.json'
 import seed from '@/content/seed.json'
 import { apiVersion, dataset, isSanityConfigured, projectId } from '@/sanity/env'
 
@@ -92,22 +93,68 @@ export async function getHome(): Promise<Home> {
   return h ?? { heroPortrait: null, heroRoles: [], skills: [], featured: [], shots: [] }
 }
 
+/* Local preview of content/new-projects.json (fallback mode only; media served from public/media) */
+const localNew = (newProjects.projects as unknown as LocalProject[]).map((p) => {
+  const img = (src: string) => ({ url: `/media/${src}` })
+  return {
+    slug: p.slug,
+    title: p.title,
+    summary: p.summary,
+    tags: p.tags,
+    scope: p.scope,
+    role: p.role,
+    date: p.date,
+    contributors: p.contributors,
+    previewUrl: p.previewUrl,
+    cover: img(p.cover),
+    hero: img(p.hero),
+    video: p.cardVideo ? `/media/${p.cardVideo}` : null,
+    sections: p.sections.map((s) => ({
+      heading: s.heading,
+      body: seedToPortableText(s.content, img, (src) => ({ asset: null, url: `/media/${src}` })).map((b) =>
+        b._type === 'videoEmbed' && (b.file as { url?: string } | undefined)?.url
+          ? { ...b, fileUrl: (b.file as { url: string }).url }
+          : b,
+      ) as unknown as PortableTextBlock[],
+    })),
+  } satisfies Project
+})
+type LocalProject = {
+  slug: string
+  title: string
+  summary: string
+  tags: string[]
+  scope: string[]
+  role: string
+  date: string
+  contributors?: string
+  previewUrl?: string
+  cover: string
+  hero: string
+  cardVideo?: string
+  sections: { heading: string; content: SeedItem[] }[]
+}
+
 export async function getProjects(): Promise<ProjectCard[]> {
-  if (!client) return seed.projects.map(seedCard)
+  if (!client) return [...localNew, ...seed.projects.map(seedCard)]
   return query<ProjectCard[]>(`*[_type == "project" && defined(slug.current)] | order(order asc, _createdAt asc){ ${CARD} }`)
 }
 
 export async function getProject(slug: string): Promise<Project | null> {
   if (!client) {
+    const n = localNew.find((x) => x.slug === slug)
+    if (n) return n
     const p = seed.projects.find((x) => x.slug === slug)
     return p ? seedProject(p) : null
   }
   return query<Project | null>(
     `*[_type == "project" && slug.current == $slug][0]{
-      ${CARD}, role, date, contributors, previewUrl, previewLabel, "hero": hero${IMG},
+      ${CARD}, "scope": coalesce(scope, []), role, date, contributors, previewUrl, previewLabel, "hero": hero${IMG},
       "sections": coalesce(sections[]{ heading, "body": coalesce(body[]{
         ...,
-        _type == "imageRow" => { "images": images[]{ _key, size, alt, "url": asset->url, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height } }
+        _type == "imageRow" => { "images": images[]{ _key, size, alt, "url": asset->url, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height } },
+        _type == "videoEmbed" => { "fileUrl": file.asset->url },
+        _type == "beforeAfter" => { "before": before${IMG}, "after": after${IMG} }
       }, []) }, [])
     }`,
     { slug },

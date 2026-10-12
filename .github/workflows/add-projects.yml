@@ -1,0 +1,38 @@
+name: Add new case studies
+
+# Run manually from the Actions tab. Uploads the media in content/media and creates the
+# case studies in content/new-projects.json. Never overwrites ones that already exist.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (check setup, write nothing)'
+        type: boolean
+        default: false
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - uses: actions/cache@v4
+        with:
+          path: .migration-cache.json
+          key: migration-cache-${{ github.run_id }}
+          restore-keys: migration-cache-
+
+      - name: Add case studies
+        run: npx tsx scripts/add-projects.ts ${{ inputs.dry_run && '--dry-run' || '' }}
+        env:
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          SANITY_API_WRITE_TOKEN: ${{ secrets.SANITY_API_WRITE_TOKEN }}

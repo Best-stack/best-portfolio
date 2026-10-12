@@ -25,6 +25,7 @@ export type ProjectCard = {
 }
 
 export type Project = ProjectCard & {
+  scope?: string[]
   role?: string
   date?: string
   contributors?: string

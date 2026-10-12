@@ -9,7 +9,9 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "migrate": "tsx scripts/migrate.ts",
-    "migrate:dry": "tsx scripts/migrate.ts --dry-run"
+    "migrate:dry": "tsx scripts/migrate.ts --dry-run",
+    "add-projects": "tsx scripts/add-projects.ts",
+    "add-projects:dry": "tsx scripts/add-projects.ts --dry-run"
   },
   "dependencies": {
     "@portabletext/react": "^8.0.1",

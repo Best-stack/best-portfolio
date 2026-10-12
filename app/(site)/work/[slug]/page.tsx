@@ -71,6 +71,13 @@ export default async function CaseStudyPage({ params }: Params) {
 
         <section className="case-intro wrap">
           {project.summary && <h2>{project.summary}</h2>}
+          {project.scope && project.scope.length > 0 && (
+            <ul className="scope" aria-label="What I did">
+              {project.scope.map((s) => (
+                <li key={s}>{s}</li>
+              ))}
+            </ul>
+          )}
           <dl className="meta">
             {meta.map(([k, v]) => (
               <div key={k}>

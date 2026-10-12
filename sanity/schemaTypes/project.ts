@@ -55,6 +55,7 @@ const caseBody = defineField({
                       { title: 'Full width', value: 'full' },
                       { title: 'Half', value: 'half' },
                       { title: 'Third', value: 'third' },
+                      { title: 'Quarter (phone screens)', value: 'quarter' },
                     ],
                     layout: 'radio',
                     direction: 'horizontal',
@@ -79,9 +80,74 @@ const caseBody = defineField({
       name: 'videoEmbed',
       title: 'Video',
       fields: [
-        defineField({ name: 'url', type: 'url', title: 'YouTube, Vimeo or .mp4 URL', validation: (r) => r.required() }),
+        defineField({
+          name: 'file',
+          type: 'file',
+          title: 'Upload a video',
+          description: 'MP4 works best. Use this OR a link below.',
+          options: { accept: 'video/mp4,video/webm,video/quicktime' },
+        }),
+        defineField({ name: 'url', type: 'url', title: 'Or paste a YouTube, Vimeo or .mp4 link' }),
+        defineField({
+          name: 'autoplay',
+          type: 'boolean',
+          title: 'Play silently on loop (best for screen recordings)',
+          initialValue: true,
+        }),
+        defineField({
+          name: 'layout',
+          type: 'string',
+          title: 'Size',
+          initialValue: 'wide',
+          options: {
+            list: [
+              { title: 'Full width', value: 'wide' },
+              { title: 'Narrower (tall / phone recordings)', value: 'narrow' },
+            ],
+            layout: 'radio',
+            direction: 'horizontal',
+          },
+        }),
+        defineField({ name: 'caption', type: 'string' }),
       ],
-      preview: { select: { title: 'url' }, prepare: ({ title }) => ({ title: 'Video', subtitle: title }) },
+      validation: (r) =>
+        r.custom((v: { file?: { asset?: unknown }; url?: string } | undefined) =>
+          v?.file?.asset || v?.url ? true : 'Upload a video or paste a link',
+        ),
+      preview: {
+        select: { title: 'caption', url: 'url' },
+        prepare: ({ title, url }) => ({ title: title || 'Video', subtitle: url || 'Uploaded video' }),
+      },
+    }),
+    defineArrayMember({
+      type: 'object',
+      name: 'beforeAfter',
+      title: 'Before / after',
+      fields: [
+        defineField({ name: 'before', type: 'image', title: 'Before', validation: (r) => r.required() }),
+        defineField({ name: 'after', type: 'image', title: 'After', validation: (r) => r.required() }),
+        defineField({ name: 'beforeLabel', type: 'string', title: 'Before label', initialValue: 'Before' }),
+        defineField({ name: 'afterLabel', type: 'string', title: 'After label', initialValue: 'After' }),
+        defineField({
+          name: 'layout',
+          type: 'string',
+          title: 'Size',
+          initialValue: 'wide',
+          options: {
+            list: [
+              { title: 'Wide (desktop screenshots)', value: 'wide' },
+              { title: 'Narrow (phone screenshots)', value: 'narrow' },
+            ],
+            layout: 'radio',
+            direction: 'horizontal',
+          },
+        }),
+        defineField({ name: 'caption', type: 'string' }),
+      ],
+      preview: {
+        select: { title: 'caption', media: 'after' },
+        prepare: ({ title, media }) => ({ title: title || 'Before / after', subtitle: 'Drag slider', media }),
+      },
     }),
     defineArrayMember({
       type: 'object',
@@ -158,6 +224,15 @@ export const project = defineType({
     }),
     defineField({ name: 'cover', title: 'Card image', type: 'image', group: 'card', options: { hotspot: true } }),
     defineField({ name: 'hero', title: 'Case study hero image', type: 'image', group: 'card', options: { hotspot: true } }),
+    defineField({
+      name: 'scope',
+      title: 'What I did',
+      description: 'Short items shown near the top, e.g. "Navigation redesign", "Design system".',
+      type: 'array',
+      group: 'card',
+      of: [defineArrayMember({ type: 'string' })],
+      options: { layout: 'tags' },
+    }),
     defineField({ name: 'role', type: 'string', group: 'card' }),
     defineField({ name: 'date', type: 'string', group: 'card' }),
     defineField({ name: 'contributors', type: 'string', group: 'card' }),
