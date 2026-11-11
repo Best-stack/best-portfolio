@@ -120,7 +120,8 @@ async function main() {
   data.projects.forEach((p, i) => {
     const _id = `project-${p.slug}`
     if (present.has(_id) && !FORCE) {
-      console.log(`  • ${p.title} already exists — skipped (use --force to replace)`)
+      console.log(`  • ${p.title} already exists — kept, order set to ${i + 1}`)
+      tx.patch(_id, (patch) => patch.set({ order: i + 1 }))
       return
     }
     created++
