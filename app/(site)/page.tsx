@@ -1,15 +1,18 @@
+import { Experience } from '@/components/Experience'
 import { Hero } from '@/components/Hero'
+import { SiteHeader } from '@/components/SiteHeader'
 import { WorkStack } from '@/components/WorkStack'
-import { getHome, getProjects, getSettings } from '@/lib/content'
+import { getAbout, getHome, getProjects, getSettings } from '@/lib/content'
 import { imgSrc } from '@/lib/img'
 
 export const revalidate = 60
 
 export default async function HomePage() {
-  const [home, settings, projects] = await Promise.all([getHome(), getSettings(), getProjects()])
+  const [home, settings, projects, about] = await Promise.all([getHome(), getSettings(), getProjects(), getAbout()])
 
   return (
     <>
+      <SiteHeader settings={settings} />
       <Hero
         portrait={home.heroPortrait}
         marqueeText={home.marqueeText ?? `${settings.name} –`}
@@ -33,6 +36,8 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <Experience jobs={about.experience} className="home-experience wrap-wide" />
 
       <section id="work" className="shots wrap-wide">
         <div className="shots__head">

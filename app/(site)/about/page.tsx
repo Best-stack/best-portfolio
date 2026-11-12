@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import { Experience } from '@/components/Experience'
 import { ArrowUpRight } from '@/components/icons'
 import { SiteHeader } from '@/components/SiteHeader'
 import { getAbout, getSettings } from '@/lib/content'
@@ -37,26 +38,7 @@ export default async function AboutPage() {
         </section>
       )}
 
-      {about.experience.length > 0 && (
-        <section className="about-block wrap">
-          <div className="two-col">
-            <h2 className="lbl label" style={{ margin: 0 }}>
-              (Experience)
-            </h2>
-            <ul className="jobs">
-              {about.experience.map((j, i) => (
-                <li key={i}>
-                  <span>{j.years}</span>
-                  <div>
-                    <strong>{j.role}</strong> — {j.company}
-                    {j.location ? `, ${j.location}` : ''}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
+      <Experience jobs={about.experience} />
 
       {about.why.length > 0 && (
         <section className="about-block wrap">

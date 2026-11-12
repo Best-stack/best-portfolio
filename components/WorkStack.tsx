@@ -6,11 +6,43 @@ import { imgSrc } from '@/lib/img'
 import type { ProjectCard } from '@/lib/types'
 
 /**
- * Selected works as stacked cards: each card sticks near the top of the
- * screen and the next one slides over it while scrolling.
+ * Selected works as stacked cards: each card sticks near the top and the next one
+ * slides over it while scrolling. On desktop the cards scroll inside their own area,
+ * so moving the mouse off it scrolls the page past the section.
  */
 export function WorkStack({ projects }: { projects: ProjectCard[] }) {
+  const scrollerRef = useRef<HTMLDivElement>(null)
+
+  // The cards only take over the mouse wheel once the section has settled in place
+  // under the header; before that (and with the mouse outside it) the page scrolls.
+  useEffect(() => {
+    const el = scrollerRef.current
+    if (!el) return
+    if (!window.matchMedia('(hover: hover) and (pointer: fine) and (min-width: 901px)').matches) return
+    let timer: ReturnType<typeof setTimeout> | undefined
+    const park = () => parseFloat(getComputedStyle(el).scrollMarginTop) || 0
+    const update = () => {
+      const offset = el.getBoundingClientRect().top - park()
+      el.dataset.active = Math.abs(offset) < 30 ? 'true' : 'false'
+      // When scrolling stops with the section almost in place, nudge it into place once.
+      clearTimeout(timer)
+      timer = setTimeout(() => {
+        const o = el.getBoundingClientRect().top - park()
+        if (Math.abs(o) >= 2 && o > -160 && o < 90) window.scrollBy({ top: o, behavior: 'smooth' })
+      }, 140)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
+
   return (
+    <div ref={scrollerRef} className="stack-scroller" tabIndex={0} aria-label="Selected works">
     <ol className="stack-list">
       {projects.map((p, i) => (
         <li key={p.slug} className="stack-slot" style={{ '--i': i } as React.CSSProperties}>
@@ -18,6 +50,7 @@ export function WorkStack({ projects }: { projects: ProjectCard[] }) {
         </li>
       ))}
     </ol>
+    </div>
   )
 }
 

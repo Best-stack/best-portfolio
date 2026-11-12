@@ -228,13 +228,6 @@ export function Hero({ portrait, marqueeText, roles, settings, gridSize = 22, st
       )}
       <canvas ref={canvasRef} aria-hidden="true" />
 
-      <header className="hero__head">
-        <a href="/">© {settings.name}</a>
-        <a className="nav-mid" href="/work">Projects</a>
-        <a className="nav-mid" href="/about">About</a>
-        <a href={settings.calendlyUrl ?? '/about#contact'}>Contact</a>
-      </header>
-
       <div className="hero__marquee" aria-hidden="true">
         <div className="marquee-track">{repeated}</div>
       </div>
