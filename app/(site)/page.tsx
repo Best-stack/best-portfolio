@@ -1,5 +1,5 @@
 import { Hero } from '@/components/Hero'
-import { WorkGrid } from '@/components/WorkGrid'
+import { WorkStack } from '@/components/WorkStack'
 import { getHome, getProjects, getSettings } from '@/lib/content'
 import { imgSrc } from '@/lib/img'
 
@@ -39,7 +39,7 @@ export default async function HomePage() {
           <h2>Selected works</h2>
           <div className="label">({projects.length} case studies)</div>
         </div>
-        <WorkGrid projects={projects} />
+        <WorkStack projects={projects} />
       </section>
 
       {home.philosophy && (

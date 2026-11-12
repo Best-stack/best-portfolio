@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { WorkGrid } from '@/components/WorkGrid'
+import { WorkStack } from '@/components/WorkStack'
 import { SiteHeader } from '@/components/SiteHeader'
 import { getProjects, getSettings } from '@/lib/content'
 
@@ -17,7 +17,7 @@ export default async function WorkPage() {
           <h1>Selected works</h1>
           <div className="label">({projects.length} case studies)</div>
         </div>
-        <WorkGrid projects={projects} />
+        <WorkStack projects={projects} />
       </section>
     </>
   )
