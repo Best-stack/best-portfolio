@@ -697,7 +697,7 @@
                 "Redesigned the card list, with filters for series, type and rarity",
                 "Redesigned the shop: collection pages, product pages and the cart drawer",
                 "Designed news articles, FAQ, careers and job pages on the same system",
-                "Designed a mobile version of every page, and built a design system and a UVS x Riftbound style guide to keep it all consistent"
+                "Designed a mobile version of every page, and built a design system to keep it all consistent"
               ]
             }
           ]
@@ -791,23 +791,23 @@
           "heading": "The new Riftbound OP page",
           "content": [
             {
-              "p": "I then redesigned Riftbound Organized Play from the ground up as its own hub: the 2026 Premier Events schedule with a live countdown to the next Regional, the North American Regional Championship, the Showdown Series, a calendar to find a Showdown event near you, and past Regionals. Every section animates in as you scroll."
+              "p": "I then gave Riftbound Organized Play its own home, with a schedule of premier events and a countdown to the next one. Motion does a lot of the work here."
             },
             {
               "video": {
-                "src": "uvs-games/rift-new.mp4",
-                "caption": "The new Riftbound OP page, scrolling with its section animations",
+                "src": "uvs-games/rift-anim.mp4",
+                "caption": "The animated Riftbound OP page on desktop",
                 "layout": "wide",
                 "autoplay": true
               }
             },
             {
-              "img": [
-                {
-                  "src": "uvs-games/m-rift-new.jpg",
-                  "size": "full"
-                }
-              ]
+              "video": {
+                "src": "uvs-games/rift-anim-mobile.mp4",
+                "caption": "And on a phone",
+                "layout": "narrow",
+                "autoplay": true
+              }
             }
           ]
         },
