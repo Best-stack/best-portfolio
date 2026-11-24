@@ -30,11 +30,14 @@ const AI_POINT = {
   text: 'I use AI tools like Claude, ChatGPT, Midjourney and Figma AI every day to research, explore ideas, prototype and ship faster, while the craft and the decisions stay human.',
 }
 
+const INTRO =
+  "I bring six years of design experience and a lot of life to every project. I've designed for banks, clinics, games studios, AI foundations, food apps and skincare brands, so I've rarely met a problem I haven't seen from a few angles. And away from the screen, I've collected enough stories to talk for hours. Ask me about any of them."
+
 type Job = { _key: string; years?: string; role?: string; company?: string; location?: string }
 type Reason = { _key: string; title?: string; text?: string }
 
 async function main() {
-  const about = await client.fetch<{ _id: string; experience?: Job[]; why?: Reason[] } | null>(
+  const about = await client.fetch<{ _id: string; intro?: string; experience?: Job[]; why?: Reason[] } | null>(
     `*[_id == "aboutPage"][0]{ _id, experience, why }`,
   )
   if (!about) throw new Error('About page not found')
@@ -54,6 +57,12 @@ async function main() {
     console.log('  • Replacing "No-code enthusiast" with "AI tools"')
     changes++
   } else console.log('  • No "No-code" point found — skipped')
+
+  if (about.intro !== INTRO) {
+    patch.set({ intro: INTRO })
+    console.log('  • Updating the intro')
+    changes++
+  }
 
   if (!changes || DRY) return console.log(DRY ? '\nDry run — nothing written.' : '\nNothing to change.')
   await patch.commit()
