@@ -619,17 +619,20 @@
     {
       "slug": "uvs-games",
       "title": "UVS Games",
-      "summary": "A redesign of UVS Games — home of the UniVersus card game — with a new navigation, homepage and organized-play experience.",
+      "summary": "I redesigned the UVS Games website, home of the UniVersus and Riftbound card games: a new navigation, homepage, organized play, card list and shop, with bolder visuals across every page.",
       "tags": [
         "Gaming",
         "Web Design",
         "UI/UX"
       ],
       "scope": [
-        "Navigation & mega menu",
-        "Homepage redesign",
-        "Mobile navigation",
-        "Organized Play pages",
+        "Website redesign",
+        "Navigation & IA",
+        "Homepage",
+        "Organized Play (UniVersus & Riftbound)",
+        "Card list",
+        "Shop",
+        "Mobile for every page",
         "Design system"
       ],
       "role": "UI/UX Design",
@@ -668,7 +671,34 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "UVS publishes several games (UniVersus, Riftbound and Star Trek: Star Realms), but the old site hid them behind a long text menu, and the homepage was a single banner followed by a newsletter form. Players had no clear path to events, card lists or stores, so that's what I set out to fix."
+              "p": "UVS publishes several card games (UniVersus, Riftbound and Star Trek: Star Realms), but the old site didn't show that. The games were hidden behind a long text menu, the homepage was one banner and a newsletter form, and the visuals didn't match the energy of the games."
+            },
+            {
+              "ul": [
+                "Players had no clear path to events, card lists or stores",
+                "Organized play info was scattered, with nothing for Riftbound players",
+                "The shop felt like a separate site, with little to help people browse",
+                "On mobile, everything was cramped and hard to tap"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "What I did",
+          "content": [
+            {
+              "p": "I redesigned the site page by page, with bold character art, dark panels and the angled orange buttons that now run through everything."
+            },
+            {
+              "ul": [
+                "Restructured the navigation around the games, with a mega menu on desktop and collapsible groups on mobile",
+                "Redesigned the homepage so every game, the latest news and upcoming events are one scroll away",
+                "Designed an Organized Play hub, plus dedicated pages for UniVersus, Riftbound and retailers",
+                "Redesigned the card list, with filters for series, type and rarity",
+                "Redesigned the shop: collection pages, product pages and the cart drawer",
+                "Designed news articles, FAQ, careers and job pages on the same system",
+                "Designed a mobile version of every page, and built a design system and a UVS x Riftbound style guide to keep it all consistent"
+              ]
             }
           ]
         },
@@ -697,11 +727,7 @@
           "heading": "A homepage that does the work",
           "content": [
             {
-              "ul": [
-                "Every game gets its own card with \"Explore game\" and \"Find a store\"",
-                "Latest news and upcoming events sit right on the homepage",
-                "Organized play for each game has its own banner and CTA"
-              ]
+              "p": "I made the homepage the front door to everything UVS does. A hero carousel for the latest release leads into a card for each game with \"Explore game\" and \"Find a store\", then news, organized play and upcoming events."
             },
             {
               "img": [
@@ -710,16 +736,147 @@
                   "size": "full"
                 }
               ]
+            },
+            {
+              "video": {
+                "src": "uvs-games/v-home.mp4",
+                "caption": "The homepage on a phone",
+                "layout": "narrow",
+                "autoplay": true
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-home.jpg",
+                  "size": "full"
+                }
+              ]
             }
           ]
         },
         {
-          "heading": "Live on uvsgames.com",
+          "heading": "Riftbound Organized Play",
           "content": [
+            {
+              "p": "When UVS took on organized play for Riftbound, the League of Legends card game, I designed its page to match the game's world: the champion art, the Rift's deep blues and gold accents. It explains every event type, from Pre-Rift events and Nexus Nights up to Regionals and Worlds, and points players and retailers to their next step."
+            },
             {
               "img": [
                 {
-                  "src": "uvs-games/mobile.jpg",
+                  "src": "uvs-games/d-riftbound.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "video": {
+                "src": "uvs-games/v-riftbound.mp4",
+                "caption": "Riftbound Organized Play on a phone",
+                "layout": "narrow",
+                "autoplay": true
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-riftbound.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Organized Play hub",
+          "content": [
+            {
+              "p": "One hub explains how organized play works (play locally, grow your game, chase the spotlight) and splits into UniVersus, Riftbound and retailer paths."
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/d-op.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-op.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Card list",
+          "content": [
+            {
+              "p": "I gave the card list the space the artwork deserves: a big, scannable grid with filters for series, type and rarity, and paging that holds up across thousands of cards."
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/d-cards.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "video": {
+                "src": "uvs-games/v-cards.mp4",
+                "caption": "The card list on a phone",
+                "layout": "narrow",
+                "autoplay": true
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-cards.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "UVS Shop",
+          "content": [
+            {
+              "p": "I brought the shop into the same visual system as the main site: shop by category, clear sold-out labels, sort and filter, and product pages with a gallery, quantity, \"Find a store\" and \"Notify me when available\"."
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/d-shop.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/d-product.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "video": {
+                "src": "uvs-games/v-shop.mp4",
+                "caption": "The shop on a phone",
+                "layout": "narrow",
+                "autoplay": true
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-shop.jpg",
                   "size": "full"
                 }
               ]
