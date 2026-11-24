@@ -1124,11 +1124,10 @@
       "scope": [
         "Website redesign",
         "Homepage",
-        "AAIF Landscape",
         "Events",
+        "Podcasts",
         "Community Chapters",
-        "Maintainer Benefits",
-        "Excellence Awards",
+        "Brand guidelines",
         "Mobile for every page"
       ],
       "role": "UI/UX Design",
@@ -1142,7 +1141,7 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "The foundation launched in December 2025 with a simple site that explained what AAIF was. As the community grew, it needed somewhere people would come back to: to find projects, events, groups near them and ways to get involved. The launch site wasn't built for that."
+              "p": "The foundation launched in December 2025 with a simple site that explained what AAIF was. As the community grew, it needed somewhere people would come back to: to find projects, events, groups near them and ways to get involved."
             }
           ]
         },
@@ -1154,10 +1153,11 @@
             },
             {
               "ul": [
-                "Redesigned the homepage around getting involved, with events, community groups and projects front and centre",
-                "Designed the AAIF Landscape, a directory of agentic AI projects people can filter and browse",
-                "Redesigned events, with a grid, calendar and map view, and a hero search that answers questions",
-                "Designed new pages as the foundation launched new programs: Community Chapters, Maintainer Benefits, the Technical Excellence Awards and the Slack invite",
+                "Redesigned the homepage around getting involved",
+                "Redesigned events, with a grid, calendar and map view",
+                "Designed a home for the AAIF podcast",
+                "Designed Community Chapters, with a cover for every city",
+                "Designed the brand guidelines page",
                 "Designed a mobile version of every page"
               ]
             }
@@ -1167,43 +1167,33 @@
           "heading": "Homepage",
           "content": [
             {
-              "compare": {
-                "before": "aaif/b-home.jpg",
-                "after": "aaif/a-home.jpg",
-                "beforeLabel": "Launch site",
-                "afterLabel": "Redesign",
-                "caption": "The homepage, before and after",
-                "layout": "wide"
-              }
+              "p": "The launch homepage:"
             },
             {
               "img": [
                 {
-                  "src": "aaif/home-new-full.jpg",
-                  "size": "half"
-                },
-                {
-                  "src": "aaif/after-mobile.jpg",
-                  "size": "half"
+                  "src": "aaif/b-home.jpg",
+                  "size": "full"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "heading": "AAIF Landscape",
-          "content": [
-            {
-              "p": "The launch site listed three projects. I turned it into a landscape of the whole ecosystem, grouped by application and capability, with filters and stats."
             },
             {
-              "compare": {
-                "before": "aaif/b-projects.jpg",
-                "after": "aaif/a-landscape.jpg",
-                "beforeLabel": "Launch site",
-                "afterLabel": "Redesign",
-                "caption": "Projects, before and after",
-                "layout": "wide"
+              "p": "The new hero. The search bar cycles through real questions people ask about agentic AI."
+            },
+            {
+              "video": {
+                "src": "aaif/hero-live.mp4",
+                "caption": "The new homepage hero, live on aaif.io",
+                "layout": "wide",
+                "autoplay": true
+              }
+            },
+            {
+              "video": {
+                "src": "aaif/scroll-home.mp4",
+                "caption": "Scrolling the full homepage design",
+                "layout": "wide",
+                "autoplay": true
               }
             }
           ]
@@ -1212,29 +1202,31 @@
           "heading": "Events",
           "content": [
             {
-              "p": "Events went from a short list to a hub for foundation events, community events and groups, browsable as a grid, a calendar or a map. The hero search lets people just ask, like \"Any upcoming events in Toronto?\""
+              "p": "Events can be browsed as a grid, a calendar or a map, depending on whether you're looking for something soon or something near you."
             },
             {
-              "compare": {
-                "before": "aaif/b-events.jpg",
-                "after": "aaif/a-events.jpg",
-                "beforeLabel": "Launch site",
-                "afterLabel": "Redesign",
-                "caption": "Events, before and after",
-                "layout": "wide"
+              "video": {
+                "src": "aaif/events-views.mp4",
+                "caption": "Switching between grid, calendar and map on aaif.io/events",
+                "layout": "wide",
+                "autoplay": true
               }
+            }
+          ]
+        },
+        {
+          "heading": "Podcasts",
+          "content": [
+            {
+              "p": "A home for the AAIF podcast, with episodes grouped by topic and a search that lets you ask for what you want to hear."
             },
             {
-              "img": [
-                {
-                  "src": "aaif/events.jpg",
-                  "size": "half"
-                },
-                {
-                  "src": "aaif/chatbot.jpg",
-                  "size": "half"
-                }
-              ]
+              "video": {
+                "src": "aaif/scroll-podcasts.mp4",
+                "caption": "The podcasts page",
+                "layout": "wide",
+                "autoplay": true
+              }
             }
           ]
         },
@@ -1242,12 +1234,20 @@
           "heading": "Community Chapters",
           "content": [
             {
-              "p": "Each chapter gets a cover with a line drawing of its city's landmark, so a long list of chapters feels local."
+              "p": "Every chapter card uses a line drawing of a landmark from its city: the Golden Gate for San Francisco, the canal houses for Amsterdam, Sagrada Família for Barcelona. Each city gets its own soft colour, so a long list of chapters still feels local, and the cover works in light and dark."
             },
             {
               "img": [
                 {
-                  "src": "aaif/chapters.jpg",
+                  "src": "aaif/chapter-covers.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "aaif/chapters-grid.jpg",
                   "size": "full"
                 }
               ]
@@ -1255,35 +1255,18 @@
           ]
         },
         {
-          "heading": "Maintainer Benefits",
+          "heading": "Brand guidelines",
           "content": [
             {
-              "p": "This page explains what a project gets at each stage, from Sandbox to Growth to Impact, with a catalog maintainers can filter by stage."
+              "p": "A single page for anyone using the AAIF brand: the logo and its lockups, clear space, watchouts, the symbol, colours and type."
             },
             {
-              "img": [
-                {
-                  "src": "aaif/maintainer.jpg",
-                  "size": "full"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "heading": "More pages",
-          "content": [
-            {
-              "img": [
-                {
-                  "src": "aaif/awards.jpg",
-                  "size": "half"
-                },
-                {
-                  "src": "aaif/slack.jpg",
-                  "size": "half"
-                }
-              ]
+              "video": {
+                "src": "aaif/scroll-brand.mp4",
+                "caption": "The brand guidelines page",
+                "layout": "wide",
+                "autoplay": true
+              }
             }
           ]
         }
