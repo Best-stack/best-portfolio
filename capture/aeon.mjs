@@ -10,7 +10,8 @@ fs.mkdirSync(`${OUT}/raw`, { recursive: true })
 const marks = {}
 const wait = (ms) => new Promise((r) => setTimeout(r, ms))
 
-const browser = await chromium.launch()
+// Google Chrome (not the bundled Chromium) so the site's MP4 videos actually play
+const browser = await chromium.launch({ channel: 'chrome' })
 
 async function denyCookies(page) {
   try {
@@ -110,7 +111,7 @@ await record('cards', SITE + '/', async (page) => {
 // 3. Start here → quiz → recommendation (no personal details are entered)
 await record('quiz', SITE + '/booking-flow', async (page) => {
   await wait(800)
-  await page.getByText(/two minute quiz/i).first().click()
+  await page.getByText('Find the right program', { exact: false }).first().click()
   await wait(1400)
   for (let q = 0; q < 5; q++) {
     const labels = page.locator('label.custom-checkbox:visible')
@@ -128,17 +129,18 @@ await record('quiz', SITE + '/booking-flow', async (page) => {
 await record('steps', SITE + '/program/men-hormonal-health-optimization/', async (page) => {
   const sec = page.locator('.step-section-animation').first()
   const top = await sec.evaluate((el) => el.getBoundingClientRect().top + scrollY)
-  await page.evaluate((y) => scrollTo(0, y - 400), top)
-  await wait(500)
-  await smoothScrollTo(page, top, 1300)
-  await wait(1600)
-  const next = sec.locator('.next-step-btn')
-  for (let i = 0; i < 6; i++) {
-    if (!(await next.isVisible().catch(() => false))) break
-    await next.hover()
+  await page.evaluate((y) => scrollTo(0, y - 500), top)
+  await wait(600)
+  await smoothScrollTo(page, top, 1400)
+  await wait(1800)
+  // A real mouse click on the arrow (a locator click scrolls the page and breaks the effect)
+  for (let i = 0; i < 4; i++) {
+    const b = await sec.locator('.next-step-btn').first().boundingBox()
+    if (!b) break
+    await page.mouse.move(b.x + b.width / 2, b.y + b.height / 2, { steps: 12 })
     await wait(300)
-    await next.click()
-    await wait(2000)
+    await page.mouse.click(b.x + b.width / 2, b.y + b.height / 2)
+    await wait(2400)
   }
   await wait(800)
 })
