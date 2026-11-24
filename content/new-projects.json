@@ -756,7 +756,7 @@
           ]
         },
         {
-          "heading": "Riftbound Organized Play",
+          "heading": "Riftbound Organized Play (live)",
           "content": [
             {
               "p": "When UVS took on organized play for Riftbound, the League of Legends card game, I designed its page to match the game's world: the champion art, the Rift's deep blues and gold accents. It explains every event type, from Pre-Rift events and Nexus Nights up to Regionals and Worlds, and points players and retailers to their next step."
@@ -781,6 +781,30 @@
               "img": [
                 {
                   "src": "uvs-games/m-riftbound.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The new Riftbound OP page",
+          "content": [
+            {
+              "p": "I then redesigned Riftbound Organized Play from the ground up as its own hub: the 2026 Premier Events schedule with a live countdown to the next Regional, the North American Regional Championship, the Showdown Series, a calendar to find a Showdown event near you, and past Regionals. Every section animates in as you scroll."
+            },
+            {
+              "video": {
+                "src": "uvs-games/rift-new.mp4",
+                "caption": "The new Riftbound OP page, scrolling with its section animations",
+                "layout": "wide",
+                "autoplay": true
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "uvs-games/m-rift-new.jpg",
                   "size": "full"
                 }
               ]
@@ -815,21 +839,13 @@
           "heading": "Card list",
           "content": [
             {
-              "p": "I gave the card list the space the artwork deserves: a big, scannable grid with filters for series, type and rarity, and paging that holds up across thousands of cards."
-            },
-            {
-              "img": [
-                {
-                  "src": "uvs-games/d-cards.jpg",
-                  "size": "full"
-                }
-              ]
+              "p": "I gave the card list the space the artwork deserves: a big, scannable grid with filters for series, type and rarity. Hover a card and it tilts toward your mouse with a light glare across it, like holding a real card. Click and it opens full size."
             },
             {
               "video": {
-                "src": "uvs-games/v-cards.mp4",
-                "caption": "The card list on a phone",
-                "layout": "narrow",
+                "src": "uvs-games/cards-hover.mp4",
+                "caption": "Hovering the card list: tilt, glare, then a card opens",
+                "layout": "wide",
                 "autoplay": true
               }
             },
