@@ -137,6 +137,7 @@ async function main() {
         patch.set({
           summary: p.summary,
           scope: p.scope,
+          ...(p.previewUrl ? { previewUrl: p.previewUrl } : {}),
           sections: p.sections.map((s) => ({
             _key: key(),
             _type: 'caseSection',
@@ -146,6 +147,15 @@ async function main() {
         }),
       )
       console.log(`  • Refreshing sections of ${p.title}`)
+    }
+    // Every other case study without a live link gets a placeholder link (to be replaced in the Studio)
+    const all = await client.fetch<{ _id: string; title: string; previewUrl?: string; previewLabel?: string }[]>(
+      `*[_type == "project" && !(_id in path("drafts.**"))]{ _id, title, previewUrl, previewLabel }`,
+    )
+    for (const e of all) {
+      if (e.previewUrl || REFRESH.includes(e._id.replace(/^project-/, ''))) continue
+      console.log(`  • Placeholder link for ${e.title}${e.previewLabel ? ` (had label "${e.previewLabel}")` : ''}`)
+      tx.patch(e._id, (patch) => patch.set({ previewUrl: 'https://example.com' }))
     }
     if (DRY) return console.log('\nDry run complete — nothing was written.')
     await tx.commit()

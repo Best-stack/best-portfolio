@@ -26,7 +26,7 @@
       "hero": "anyday/hero.jpg",
       "sections": [
         {
-          "heading": "What was done",
+          "heading": "What I did",
           "content": [
             {
               "p": "Anyday's old site looked good but didn't say much. I led the redesign from the brand direction through to the final pages, repositioning Anyday from \"an agency that builds websites\" to the team that runs many brand websites as one system, for CTOs, CMOs and web ops leads."
@@ -46,7 +46,7 @@
           "heading": "Moodboard",
           "content": [
             {
-              "p": "The moodboard set the tone: warm reds and oranges against deep black, soft blurred photography with no faces, and a serif and sans-serif pairing that felt editorial rather than techy. The best-voted references shaped the palette and imagery."
+              "p": "I started with a moodboard to set the tone: warm reds and oranges against deep black, soft blurred photography with no faces, and a serif and sans-serif pairing that felt editorial rather than techy. The references the team voted for shaped the palette and imagery."
             },
             {
               "img": [
@@ -70,7 +70,7 @@
           "heading": "The concept",
           "content": [
             {
-              "p": "The site had to show the product's main job in a few seconds: change something once and it reaches every brand. I explored two hero concepts. The first is a rollout card where one shared update travels out to 40 sites, with the lines lighting up as the counter climbs. The second is a file drawer of brands and pages that slide in and out of a shared WebOps base. We went with the rollout."
+              "p": "I wanted the site to show the product's main job in a few seconds: change something once and it reaches every brand. I explored two hero concepts. In the first, a rollout card sends one shared update out to 40 sites, with the lines lighting up as the counter climbs. In the second, a file drawer of brands and pages slides in and out of a shared WebOps base. We went with the rollout."
             },
             {
               "video": {
@@ -122,7 +122,7 @@
           "heading": "Sections that move",
           "content": [
             {
-              "p": "Each section explains one idea with a small animated figure instead of stock imagery. Hover the problem figures and the same work stacks up, the platforms split apart and the tools pile up. In the solution, the disconnected sites link up and a tile drops into one shared grid."
+              "p": "I gave each section one idea and a small animated figure to explain it, instead of stock imagery. Hover the problem figures and the same work stacks up, the platforms split apart and the tools pile up. In the solution, the disconnected sites link up and a tile drops into one shared grid."
             },
             {
               "video": {
@@ -193,7 +193,7 @@
           "heading": "The products",
           "content": [
             {
-              "p": "One section brings the three products together: Helm, the WebOps app for running every site in one window; Asyst, the design system every brand builds from; and Handbooks, one handbook per project."
+              "p": "I designed one section to bring the three products together: Helm, the WebOps app for running every site in one window; Asyst, the design system every brand builds from; and Handbooks, one handbook per project."
             },
             {
               "img": [
@@ -209,7 +209,7 @@
           "heading": "Field Notes, the blog",
           "content": [
             {
-              "p": "The blog is designed as a bookshelf. The latest articles stand on the shelf as book spines next to an editor's pick; hover one and it pulls out to show the cover. Browse all lays every article out face-forward, shelf by shelf."
+              "p": "I designed the blog as a bookshelf. The latest articles stand on the shelf as book spines next to an editor's pick; hover one and it pulls out to show the cover. Browse all lays every article out face-forward, shelf by shelf."
             },
             {
               "img": [
@@ -247,16 +247,17 @@
     {
       "slug": "asyst",
       "title": "Asyst Design System",
-      "summary": "Anyday's design system template: one set of tokens, type and components that every client brand is built from, documented on a single site.",
+      "summary": "A design system template I designed for multi-brand websites: one set of tokens, type and components every brand builds from, documented on one site.",
       "tags": [
         "Design System",
         "Documentation"
       ],
       "scope": [
-        "Foundations: colour, type, spacing, grid",
+        "Design system",
+        "Foundations & tokens",
         "Component library",
-        "Brand kit",
-        "Usage guidelines & code"
+        "Responsive components",
+        "Documentation site"
       ],
       "role": "Design System",
       "date": "2026",
@@ -268,7 +269,23 @@
           "heading": "The idea",
           "content": [
             {
-              "p": "Anyday builds many websites for multi-brand clients. Asyst is the template each one starts from: swap the brand tokens and the whole system re-themes, while components, rules and code stay the same."
+              "p": "I designed Asyst as the starting point for every new brand website. I swap the brand tokens and the whole system re-themes, while the components, rules and code stay the same."
+            }
+          ]
+        },
+        {
+          "heading": "What I did",
+          "content": [
+            {
+              "p": "I designed Asyst so a new brand site starts from a working system instead of a blank file, and so designers and developers work from the same tokens, components and rules."
+            },
+            {
+              "ul": [
+                "Designed the foundations: colour, typography, spacing, grid, and the logo and brand kit",
+                "Built the component library, including buttons, navigation, event cards and podcasts, each designed for desktop, tablet and mobile",
+                "Wrote usage guidelines for each component and paired it with ready-to-use code",
+                "Designed the documentation site itself, so anyone can find a component, see every state and copy the code"
+              ]
             }
           ]
         },
@@ -276,7 +293,7 @@
           "heading": "In motion",
           "content": [
             {
-              "p": "Every page in Asyst documents a component the same way, and every component is designed for desktop, tablet and mobile from the start."
+              "p": "I documented every component the same way, and designed each one for desktop, tablet and mobile from the start."
             },
             {
               "video": {
@@ -321,7 +338,7 @@
           "heading": "Components",
           "content": [
             {
-              "p": "Every component page shows the web and mobile versions, every state, the code to use, and the rules that keep teams from re-inventing it."
+              "p": "On every component page, I show the web and mobile versions, every state, the code to use, and the rules that keep teams from reinventing it."
             },
             {
               "img": [
@@ -344,21 +361,9 @@
               ]
             }
           ]
-        },
-        {
-          "heading": "Rules, not suggestions",
-          "content": [
-            {
-              "ul": [
-                "Colours are referenced by token, never by hex",
-                "Tokens describe purpose, not appearance",
-                "No one-off colours: propose a new token instead",
-                "Web and mobile share the same token set"
-              ]
-            }
-          ]
         }
-      ]
+      ],
+      "previewUrl": "https://example.com"
     },
     {
       "slug": "post-eat",
@@ -386,7 +391,7 @@
           "heading": "The idea",
           "content": [
             {
-              "p": "Discover, eat, review, post. Every review earns coins, and coins go towards green activities, so honest reviews also do some good."
+              "p": "I designed Post-Eat around a simple loop: discover, eat, review, post. Every review earns coins, and coins go towards green activities, so honest reviews also do some good."
             }
           ]
         },
@@ -394,7 +399,7 @@
           "heading": "Onboarding",
           "content": [
             {
-              "p": "Two rounds of onboarding, each screen built around a bright illustration so the app feels fun before you sign up."
+              "p": "I designed two rounds of onboarding, with each screen built around a bright illustration so the app feels fun before you sign up."
             },
             {
               "img": [
@@ -418,7 +423,7 @@
           "heading": "The app",
           "content": [
             {
-              "p": "A feed of reviews, filters for cuisine, food type and distance, and profiles that show what people eat and the impact they've made."
+              "p": "I designed a feed of reviews, filters for cuisine, food type and distance, and profiles that show what people eat and the impact they've made."
             },
             {
               "img": [
@@ -455,7 +460,8 @@
             }
           ]
         }
-      ]
+      ],
+      "previewUrl": "https://example.com"
     },
     {
       "slug": "uvs-games",
@@ -509,7 +515,7 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "UVS publishes several games — UniVersus, Riftbound and Star Trek: Star Realms — but the old site hid them behind a long text menu, and the homepage was a single banner followed by a newsletter form. Players had no clear path to events, card lists or stores."
+              "p": "UVS publishes several games (UniVersus, Riftbound and Star Trek: Star Realms), but the old site hid them behind a long text menu, and the homepage was a single banner followed by a newsletter form. Players had no clear path to events, card lists or stores, so that's what I set out to fix."
             }
           ]
         },
@@ -517,7 +523,7 @@
           "heading": "A navigation built around games",
           "content": [
             {
-              "p": "Games, Discover and Hub are grouped in one mega menu, with live artwork for the game you hover."
+              "p": "I grouped Games, Discover and Hub into one mega menu, with live artwork for the game you hover."
             },
             {
               "video": {
@@ -621,7 +627,7 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "The old site listed every program in one long dropdown and didn't give new visitors an obvious first step. The redesign leads with how people feel, then guides them to one."
+              "p": "The old site listed every program in one long dropdown and didn't give new visitors an obvious first step. In my redesign, the site leads with how people feel, then guides them to that first step."
             }
           ]
         },
@@ -629,7 +635,7 @@
           "heading": "Start with how you feel",
           "content": [
             {
-              "p": "The homepage asks how you feel before it talks about programs. Eight symptom cards cover muscle changes, weight, motivation, fatigue, libido, disease prevention, gut health and brain fog. Hover a card and its video plays while a short description slides up, so people recognise themselves in a few seconds."
+              "p": "I designed the homepage to ask how you feel before it talks about programs. Eight symptom cards cover muscle changes, weight, motivation, fatigue, libido, disease prevention, gut health and brain fog. Hover a card and its video plays while a short description slides up, so people recognise themselves in a few seconds."
             },
             {
               "video": {
@@ -661,7 +667,7 @@
           "heading": "Navigation by goal",
           "content": [
             {
-              "p": "Programs and therapies are grouped by what the patient wants (hormone changes, low energy, gut and mood, long-term health, strength and recovery) instead of by clinic jargon. One click opens the full menu."
+              "p": "I grouped programs and therapies by what the patient wants (hormone changes, low energy, gut and mood, long-term health, strength and recovery) instead of by clinic jargon. One click opens the full menu."
             },
             {
               "video": {
@@ -689,7 +695,7 @@
           "heading": "A clear first step",
           "content": [
             {
-              "p": "\"Start here\" lets visitors book a free consult straight away, or take a 5-question quiz that ends with a recommended program and a way to book it."
+              "p": "I added a \"Start here\" flow that lets visitors book a free consult straight away, or take a 5-question quiz that ends with a recommended program and a way to book it."
             },
             {
               "video": {
@@ -705,7 +711,7 @@
           "heading": "What to expect",
           "content": [
             {
-              "p": "Every program page lays out the journey as five steps on a turning arc, from the free first call to reviewing next steps, so patients know what happens before they book."
+              "p": "On every program page, I laid out the journey as five steps on a turning arc, from the free first call to reviewing next steps, so patients know what happens before they book."
             },
             {
               "video": {
@@ -786,7 +792,7 @@
           "heading": "Aeon Shop",
           "content": [
             {
-              "p": "A companion store for Aeon's supplements: collections by need, quick-add flavours, and subscribe-and-save on every product page."
+              "p": "I also designed a companion store for Aeon's supplements, with collections by need, quick-add flavours, and subscribe-and-save on every product page."
             },
             {
               "img": [
@@ -846,7 +852,7 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "The launch site introduced the foundation. The redesign turns it into a hub people come back to — for projects, events and community."
+              "p": "The launch site introduced the foundation. With the redesign, I turned it into a hub people come back to for projects, events and community."
             }
           ]
         },
@@ -854,7 +860,7 @@
           "heading": "AAIF Landscape",
           "content": [
             {
-              "p": "A filterable directory of agentic AI projects, grouped by application and capability."
+              "p": "I designed a filterable directory of agentic AI projects, grouped by application and capability."
             },
             {
               "img": [
@@ -870,7 +876,7 @@
           "heading": "Events, on a map",
           "content": [
             {
-              "p": "Foundation events, community events and groups — browsable as a grid, a calendar or a map."
+              "p": "I made foundation events, community events and groups browsable as a grid, a calendar or a map."
             },
             {
               "img": [
@@ -886,7 +892,7 @@
           "heading": "Ask the site",
           "content": [
             {
-              "p": "The hero search opens a chatbot for questions like \"Any upcoming events in Toronto?\""
+              "p": "I turned the hero search into a chatbot for questions like \"Any upcoming events in Toronto?\""
             },
             {
               "img": [
@@ -955,7 +961,7 @@
           "heading": "The problem",
           "content": [
             {
-              "p": "The old Oxy site was a straightforward product catalogue. The relaunch needed a voice as bold as the new brand — and an easier way to shop by acne type."
+              "p": "The old Oxy site was a straightforward product catalogue. For the relaunch, I needed to give the site a voice as bold as the new brand, and an easier way to shop by acne type."
             }
           ]
         },
@@ -963,7 +969,7 @@
           "heading": "One hero, three acne types",
           "content": [
             {
-              "p": "The hero splits into Mild, Stubborn and All Acne — each panel opens its own message and products. The mega menus follow the same shop-by-concern logic."
+              "p": "I split the hero into Mild, Stubborn and All Acne, and each panel opens its own message and products. I built the mega menus on the same shop-by-concern logic."
             },
             {
               "img": [
@@ -1047,7 +1053,7 @@
           "heading": "The idea",
           "content": [
             {
-              "p": "Attach a tag, someone scans it, and you chat privately — no phone number, email or address shared. The site and app both had to make that promise obvious in seconds."
+              "p": "Attach a tag, someone scans it, and you chat privately, with no phone number, email or address shared. My job was to make that promise obvious in seconds, on both the site and the app."
             }
           ]
         },
@@ -1055,7 +1061,7 @@
           "heading": "The app",
           "content": [
             {
-              "p": "Two flows: owners activate and manage tags; finders scan and message without signing up."
+              "p": "I designed two flows: owners activate and manage tags, and finders scan and message without signing up."
             },
             {
               "img": [
