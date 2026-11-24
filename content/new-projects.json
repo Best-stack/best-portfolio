@@ -368,19 +368,19 @@
     {
       "slug": "post-eat",
       "title": "Post-Eat",
-      "summary": "A food-review app where people discover restaurants, post honest reviews, book tables and earn rewards they can spend on sustainability.",
+      "summary": "A food-review app I designed where every review is verified at the table, and every honest review earns coins people can spend on saving the planet.",
       "tags": [
         "Mobile App",
         "Web App",
         "Product"
       ],
       "scope": [
-        "iOS app",
-        "Web app",
-        "Onboarding & illustration",
-        "Rewards",
-        "Reservations",
-        "Style guide"
+        "Product strategy",
+        "Information architecture",
+        "Mobile app (EN / IT)",
+        "Gamification: coins, levels, badges, stickers",
+        "Illustration direction",
+        "Web app"
       ],
       "role": "Product & UI Design",
       "date": "2024",
@@ -391,7 +391,46 @@
           "heading": "The idea",
           "content": [
             {
-              "p": "I designed Post-Eat around a simple loop: discover, eat, review, post. Every review earns coins, and coins go towards green activities, so honest reviews also do some good."
+              "p": "I designed Post-Eat around a simple loop: discover a restaurant, eat, scan, review, post. Reviews only count if you actually ate there, and every one earns coins you can spend on green activities, so honest reviews also do some good."
+            }
+          ]
+        },
+        {
+          "heading": "The problem",
+          "content": [
+            {
+              "p": "Food reviews are easy to fake and hard to trust. Anyone can rate a restaurant they've never been to, restaurants can't tell real diners from trolls, and the people who write genuinely useful reviews get nothing back for their time."
+            }
+          ]
+        },
+        {
+          "heading": "The solution",
+          "content": [
+            {
+              "p": "I designed the app around three ideas:"
+            },
+            {
+              "ul": [
+                "Verified reviews: each restaurant has a QR code. You scan it after your meal to unlock the review, so every review comes from someone who was really there.",
+                "Rewards that matter: every review earns coins. You spend them on stickers or on sustainability activities, and your profile tracks the impact you've had.",
+                "Social discovery: a feed of reviews and short videos, search by restaurants, reviews, videos and people, and table booking in the same app."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Information architecture",
+          "content": [
+            {
+              "p": "I kept the app to five tabs: Home, Explore, Post, Rewards and Profile. Posting a review sits in the middle of the bar, because it's the one action everything else depends on."
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/ia.jpg",
+                  "size": "full"
+                }
+              ]
             }
           ]
         },
@@ -399,20 +438,12 @@
           "heading": "Onboarding",
           "content": [
             {
-              "p": "I designed two rounds of onboarding, with each screen built around a bright illustration so the app feels fun before you sign up."
+              "p": "Three onboarding screens explain the whole product: explore and share honest reviews, scan the QR code to post, and earn rewards that save the planet. I designed each one around a bright illustration, and the app launched in English and Italian, shown below."
             },
             {
               "img": [
                 {
-                  "src": "post-eat/onboarding-v2.jpg",
-                  "size": "full"
-                }
-              ]
-            },
-            {
-              "img": [
-                {
-                  "src": "post-eat/onboarding.jpg",
+                  "src": "post-eat/onboarding-real.jpg",
                   "size": "full"
                 }
               ]
@@ -420,10 +451,31 @@
           ]
         },
         {
-          "heading": "The app",
+          "heading": "The app in motion",
           "content": [
             {
-              "p": "I designed a feed of reviews, filters for cuisine, food type and distance, and profiles that show what people eat and the impact they've made."
+              "video": {
+                "src": "post-eat/flow.mp4",
+                "caption": "Onboarding, Home, Explore, Search, a video review and the profile",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "Explore",
+          "content": [
+            {
+              "p": "Explore puts hot restaurants and trending videos first. Search splits results into restaurants, reviews, videos and people, and video reviews play full-screen like the feeds people already use."
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/explore-set.jpg",
+                  "size": "full"
+                }
+              ]
             },
             {
               "img": [
@@ -431,6 +483,37 @@
                   "src": "post-eat/app-screens.jpg",
                   "size": "full"
                 }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Posting a review",
+          "content": [
+            {
+              "p": "On a restaurant's page, \"Post a review\" opens the QR scanner. After the scan, you pick what you ate, rate it, add photos or a video and post. Coins land as soon as it's published."
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/hero.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Gamification",
+          "content": [
+            {
+              "p": "I wanted people to keep reviewing because it's fun, not because they're asked to. Every review earns coins and points. Points move you up levels, from Fresh Foodie to Taste Tester to Photo Foodie, and you unlock badges as you go. Coins buy stickers you can send in chats, or go towards sustainability activities."
+            },
+            {
+              "ul": [
+                "Rewards: total coins, stickers to collect and sustainability activities to fund",
+                "Profile: contributions, followers and an Impacts tab showing the good your reviews have done",
+                "Levels, badges and stickers live on the profile, so progress is always visible"
               ]
             }
           ]
