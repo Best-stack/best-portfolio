@@ -716,7 +716,7 @@
             },
             {
               "video": {
-                "src": "uvs-games/mobile-nav.mp4",
+                "src": "uvs-games/mobile-nav-small.mp4",
                 "layout": "narrow",
                 "caption": "Mobile navigation — collapsible groups and a persistent shop button"
               }
