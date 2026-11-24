@@ -491,12 +491,28 @@
           "heading": "Posting a review",
           "content": [
             {
-              "p": "On a restaurant's page, \"Post a review\" opens the QR scanner. After the scan, you pick what you ate, rate it, add photos or a video and post. Coins land as soon as it's published."
+              "p": "I designed posting a review as a short, guided flow. You ask the restaurant for its QR code and scan it, pick what you ate from the order, rate the experience, add photos or a video, then post. As soon as it's live, 250 coins land in your account."
+            },
+            {
+              "video": {
+                "src": "post-eat/review-flow.mp4",
+                "caption": "Posting a review, earning coins and spending them on a green initiative",
+                "layout": "wide",
+                "autoplay": true
+              }
             },
             {
               "img": [
                 {
-                  "src": "post-eat/hero.jpg",
+                  "src": "post-eat/review-1.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/review-2.jpg",
                   "size": "full"
                 }
               ]
@@ -507,13 +523,67 @@
           "heading": "Gamification",
           "content": [
             {
-              "p": "I wanted people to keep reviewing because it's fun, not because they're asked to. Every review earns coins and points. Points move you up levels, from Fresh Foodie to Taste Tester to Photo Foodie, and you unlock badges as you go. Coins buy stickers you can send in chats, or go towards sustainability activities."
+              "p": "I wanted people to keep reviewing because it's fun, not because they're asked to. So every action feeds a reward:"
             },
             {
               "ul": [
-                "Rewards: total coins, stickers to collect and sustainability activities to fund",
-                "Profile: contributions, followers and an Impacts tab showing the good your reviews have done",
-                "Levels, badges and stickers live on the profile, so progress is always visible"
+                "Coins: every review earns coins, shown on the Rewards tab",
+                "Levels: points move you up from Taste Tester to Fresh Foodie, Photo Foodie, Explorer, Detective, Connoisseur and finally Legendary",
+                "Badges: unlocked for different kinds of activity, from exploring new places to leaving feedback and joining the conversation",
+                "Stickers: collectible characters you buy with coins and send in chats",
+                "Impact: coins can be donated to sustainability initiatives, and your profile shows the total you've given back"
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/levels-badges-stickers.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Badges & levels",
+          "content": [
+            {
+              "p": "I designed six badges, each with its own colour and symbol: The Explorer, Food Lover, Epicurus, Feedback Guru, Comment Champ and The Interactor. Each one shows how close you are to the next tier. Levels use one shared flower shape in a different colour, so your rank is recognisable at a glance."
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/badges-grid.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "post-eat/levels-list.jpg",
+                  "size": "half"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Rewards & impact",
+          "content": [
+            {
+              "p": "The Rewards tab shows your coins and the ways to spend them. You can browse sustainability initiatives, read about each one and donate your coins. Your profile's Impacts tab then adds up what you've contributed, so your reviews turn into something you can see."
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/rewards.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "post-eat/profile-impact.jpg",
+                  "size": "half"
+                }
               ]
             }
           ]
