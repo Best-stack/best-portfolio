@@ -4,18 +4,19 @@
     {
       "slug": "anyday-website",
       "title": "Anyday Website",
-      "summary": "Redesigning anyday.inc around what Anyday actually sells: one web platform that runs every brand's website, with Helm, Asyst and Handbooks as the product.",
+      "summary": "A new website for Anyday that sells what it actually does: one web platform that runs every brand's website, with Helm, Asyst and Handbooks as the product.",
       "tags": [
         "Web Design",
         "Brand",
         "Product"
       ],
       "scope": [
-        "Website redesign",
-        "Dark & light mode",
-        "Mega menus",
-        "Product pages",
-        "Case study templates"
+        "Rebrand direction & moodboard",
+        "Website concept",
+        "Homepage & product pages",
+        "Motion prototype",
+        "Blog (Field Notes)",
+        "Dark & light mode"
       ],
       "role": "Product & Web Design",
       "date": "2026",
@@ -24,6 +25,80 @@
       "cover": "anyday/cover.jpg",
       "hero": "anyday/hero.jpg",
       "sections": [
+        {
+          "heading": "What was done",
+          "content": [
+            {
+              "p": "Anyday's old site looked good but didn't say much. I led the redesign from the brand direction through to the final pages, repositioning Anyday from \"an agency that builds websites\" to the team that runs many brand websites as one system, for CTOs, CMOs and web ops leads."
+            },
+            {
+              "ul": [
+                "A moodboard and visual direction for the rebrand",
+                "A homepage concept built around one idea: one update, every site",
+                "A full page set: homepage, product pages (Helm, Asyst, Handbooks), case studies, contact and a blog",
+                "Every page in dark and light mode",
+                "A coded motion prototype so the team could review the animations before build"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Moodboard",
+          "content": [
+            {
+              "p": "The moodboard set the tone: warm reds and oranges against deep black, soft blurred photography with no faces, and a serif and sans-serif pairing that felt editorial rather than techy. The best-voted references shaped the palette and imagery."
+            },
+            {
+              "img": [
+                {
+                  "src": "anyday/moodboard.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "anyday/palette.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "anyday/type.jpg",
+                  "size": "half"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The concept",
+          "content": [
+            {
+              "p": "The site had to show the product's main job in a few seconds: change something once and it reaches every brand. I explored two hero concepts. The first is a rollout card where one shared update travels out to 40 sites, with the lines lighting up as the counter climbs. The second is a file drawer of brands and pages that slide in and out of a shared WebOps base. We went with the rollout."
+            },
+            {
+              "video": {
+                "src": "anyday/rec-hero-drawer.mp4",
+                "caption": "Concept 2: the file drawer",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "The hero",
+          "content": [
+            {
+              "video": {
+                "src": "anyday/rec-hero-rollout.mp4",
+                "caption": "The final hero: one header update rolling out to every brand site",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
         {
           "heading": "Before → After",
           "content": [
@@ -48,15 +123,42 @@
           ]
         },
         {
-          "heading": "What changed",
+          "heading": "Sections that move",
           "content": [
             {
-              "ul": [
-                "Hero shows a real rollout: one header update going out to 40 brand sites",
-                "The problem, solution and process are drawn as diagrams, not stock imagery",
-                "Helm, Asyst and Handbooks get a proper home as the product",
-                "Every page works in dark and light mode"
-              ]
+              "p": "Each section explains one idea with a small animated figure instead of stock imagery. Hover the problem figures and the same work stacks up, the platforms split apart and the tools pile up. In the solution, the disconnected sites link up and a tile drops into one shared grid."
+            },
+            {
+              "video": {
+                "src": "anyday/rec-landing-problem.mp4",
+                "caption": "The problem: three figures that animate on hover",
+                "layout": "wide",
+                "autoplay": true
+              }
+            },
+            {
+              "video": {
+                "src": "anyday/rec-landing-solution.mp4",
+                "caption": "The solution: disconnected sites connect, then one tile drops into place",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "The prototype",
+          "content": [
+            {
+              "p": "I built the whole landing page as a coded motion prototype, in dark and light, so the team could scroll it, hover it and agree on the motion before development started."
+            },
+            {
+              "video": {
+                "src": "anyday/rec-landing-scroll.mp4",
+                "caption": "Scrolling the full motion prototype",
+                "layout": "wide",
+                "autoplay": true
+              }
             }
           ]
         },
@@ -101,6 +203,30 @@
               "img": [
                 {
                   "src": "anyday/helm.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Field Notes, the blog",
+          "content": [
+            {
+              "p": "The blog is designed as a bookshelf. Articles sit on shelves by topic as book spines; hover one and it pulls out to show the cover, the read time and a link. It makes a list of articles feel like a library you want to browse."
+            },
+            {
+              "img": [
+                {
+                  "src": "anyday/blog-shelf.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "anyday/blog-books.jpg",
                   "size": "full"
                 }
               ]
