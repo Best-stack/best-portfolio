@@ -144,6 +144,10 @@ async function main() {
         console.log(`  • Stale Studio draft of ${p.title} (updated ${draft._updatedAt}): ${(draft.sections ?? []).map((s) => s.heading).join(' | ')} — deleting it`)
         tx.delete(`drafts.${_id}`)
       }
+      try {
+        const h = await fetch(`https://${projectId}.api.sanity.io/v2025-01-01/data/history/${dataset}/transactions/${_id}?fromTime=2026-11-24T04:00:00Z&excludeContent=true`, { headers: { Authorization: `Bearer ${token}` } })
+        console.log(`  • History of ${p.title}:\n${(await h.text()).split('\n').filter(Boolean).map((l) => { try { const j = JSON.parse(l); return `      ${j.timestamp} by ${j.author} (${(j.mutations ?? []).map((m: object) => Object.keys(m)[0]).join(',')})` } catch { return '      ' + l.slice(0, 200) } }).join('\n')}`)
+      } catch (e) { console.log('  • history lookup failed', e) }
       // Keep a real link Best added in the Studio
       if (old?.previewUrl && old.previewUrl !== 'https://example.com') p.previewUrl = old.previewUrl
       tx.patch(_id, (patch) =>
