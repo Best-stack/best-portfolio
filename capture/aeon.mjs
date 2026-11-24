@@ -113,12 +113,11 @@ await record('quiz', SITE + '/booking-flow', async (page) => {
   await wait(800)
   // click the visible "two minute quiz" option with the real mouse
   const box = await page.evaluate(() => {
-    const els = [...document.querySelectorAll('label, a, button, div, li')].filter((e) => {
+    const leaf = [...document.querySelectorAll('body *')].find((e) => {
       const r = e.getBoundingClientRect()
-      return /two minute quiz/i.test(e.innerText || '') && r.width > 0 && r.height > 0 && getComputedStyle(e).visibility !== 'hidden'
+      return e.children.length === 0 && !/SCRIPT|STYLE/.test(e.tagName) && /quiz/i.test(e.textContent || '') && r.width > 0 && r.height > 0
     })
-    els.sort((a, b) => a.getBoundingClientRect().width * a.getBoundingClientRect().height - b.getBoundingClientRect().width * b.getBoundingClientRect().height)
-    const r = els[0].getBoundingClientRect()
+    const r = (leaf.closest('label, button, a') || leaf).getBoundingClientRect()
     return { x: r.x + r.width / 2, y: r.y + r.height / 2 }
   })
   await page.mouse.move(box.x, box.y, { steps: 15 })
