@@ -136,8 +136,16 @@ async function main() {
     for (const p of data.projects) {
       const _id = `project-${p.slug}`
       if (!present.has(_id)) fail(`${p.title} isn't in Sanity yet — run without --refresh first`)
-      const old = await client.fetch(`*[_id == $id][0]{ summary, scope, sections }`, { id: _id })
+      const old = await client.fetch<{ previewUrl?: string; _updatedAt?: string; sections?: { heading?: string }[] }>(`*[_id == $id][0]{ _updatedAt, previewUrl, summary, scope, sections }`, { id: _id })
       console.log(`  • Backup of ${p.title} before refresh:\n${JSON.stringify(old)}\n`)
+      console.log(`  • ${p.title} now in Sanity (updated ${old?._updatedAt}): ${(old?.sections ?? []).map((s) => s.heading).join(' | ')}`)
+      const draft = await client.withConfig({ perspective: "raw" }).fetch<{ _updatedAt: string; sections?: { heading?: string }[] } | null>(`*[_id == $id][0]{ _updatedAt, sections }`, { id: `drafts.${_id}` })
+      if (draft) {
+        console.log(`  • Stale Studio draft of ${p.title} (updated ${draft._updatedAt}): ${(draft.sections ?? []).map((s) => s.heading).join(' | ')} — deleting it`)
+        tx.delete(`drafts.${_id}`)
+      }
+      // Keep a real link Best added in the Studio
+      if (old?.previewUrl && old.previewUrl !== 'https://example.com') p.previewUrl = old.previewUrl
       tx.patch(_id, (patch) =>
         patch.set({
           summary: p.summary,
