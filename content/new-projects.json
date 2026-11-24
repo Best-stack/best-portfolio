@@ -61,10 +61,6 @@
                 {
                   "src": "anyday/palette.jpg",
                   "size": "half"
-                },
-                {
-                  "src": "anyday/type.jpg",
-                  "size": "half"
                 }
               ]
             }
@@ -194,15 +190,15 @@
           ]
         },
         {
-          "heading": "Helm by Anyday",
+          "heading": "The products",
           "content": [
             {
-              "p": "The WebOps app is the centre of the new site: uptime, speed, SEO and launches for every site in one window, with Asyst and Handbooks included."
+              "p": "One section brings the three products together: Helm, the WebOps app for running every site in one window; Asyst, the design system every brand builds from; and Handbooks, one handbook per project."
             },
             {
               "img": [
                 {
-                  "src": "anyday/helm.jpg",
+                  "src": "anyday/products.jpg",
                   "size": "full"
                 }
               ]
@@ -213,12 +209,12 @@
           "heading": "Field Notes, the blog",
           "content": [
             {
-              "p": "The blog is designed as a bookshelf. Articles sit on shelves by topic as book spines; hover one and it pulls out to show the cover, the read time and a link. It makes a list of articles feel like a library you want to browse."
+              "p": "The blog is designed as a bookshelf. The latest articles stand on the shelf as book spines next to an editor's pick; hover one and it pulls out to show the cover. Browse all lays every article out face-forward, shelf by shelf."
             },
             {
               "img": [
                 {
-                  "src": "anyday/blog-shelf.jpg",
+                  "src": "anyday/blog-shelf-v2.jpg",
                   "size": "full"
                 }
               ]
@@ -226,7 +222,7 @@
             {
               "img": [
                 {
-                  "src": "anyday/blog-books.jpg",
+                  "src": "anyday/blog-browse.jpg",
                   "size": "full"
                 }
               ]
