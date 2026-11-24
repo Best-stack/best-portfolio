@@ -111,15 +111,30 @@ await record('cards', SITE + '/', async (page) => {
 // 3. Start here → quiz → recommendation (no personal details are entered)
 await record('quiz', SITE + '/booking-flow', async (page) => {
   await wait(800)
-  await page.getByText('Find the right program', { exact: false }).first().click()
+  // click the visible "two minute quiz" option with the real mouse
+  const box = await page.evaluate(() => {
+    const els = [...document.querySelectorAll('label, a, button, div, li')].filter((e) => {
+      const r = e.getBoundingClientRect()
+      return /two minute quiz/i.test(e.innerText || '') && r.width > 0 && r.height > 0 && getComputedStyle(e).visibility !== 'hidden'
+    })
+    els.sort((a, b) => a.getBoundingClientRect().width * a.getBoundingClientRect().height - b.getBoundingClientRect().width * b.getBoundingClientRect().height)
+    const r = els[0].getBoundingClientRect()
+    return { x: r.x + r.width / 2, y: r.y + r.height / 2 }
+  })
+  await page.mouse.move(box.x, box.y, { steps: 15 })
+  await wait(500)
+  await page.mouse.click(box.x, box.y)
   await wait(1400)
   for (let q = 0; q < 5; q++) {
-    const labels = page.locator('label.custom-checkbox:visible')
-    await labels.nth(1).hover()
-    await wait(500)
-    await labels.nth(1).click()
+    const lb = await page.locator('label.custom-checkbox:visible').nth(1).boundingBox()
+    await page.mouse.move(lb.x + lb.width / 2, lb.y + lb.height / 2, { steps: 12 })
+    await wait(400)
+    await page.mouse.click(lb.x + lb.width / 2, lb.y + lb.height / 2)
     await wait(900)
-    await page.locator('button:visible', { hasText: 'CONTINUE' }).first().click()
+    const cb = await page.locator('button:visible', { hasText: 'CONTINUE' }).first().boundingBox()
+    await page.mouse.move(cb.x + cb.width / 2, cb.y + cb.height / 2, { steps: 12 })
+    await wait(300)
+    await page.mouse.click(cb.x + cb.width / 2, cb.y + cb.height / 2)
     await wait(1500)
   }
   await wait(2500)
