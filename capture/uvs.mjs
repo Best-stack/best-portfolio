@@ -12,6 +12,8 @@ const marks = {}
 const PAGES = [
   ['home', 'https://uvsgames.com/'],
   ['op', 'https://uvsgames.com/organized-play/'],
+  ['riftbound', 'https://uvsgames.com/riftbound-organized-play/'],
+  ['uvsop', 'https://uvsgames.com/universus-organized-play/'],
   ['cards', 'https://uvsgames.com/universus/cards/'],
   ['universus', 'https://uvsgames.com/universus/'],
   ['shop', 'https://shop.uvsgames.com/collections/all'],
@@ -75,7 +77,7 @@ const smooth = (page, by, ms) => page.evaluate(async ([by, ms]) => {
   const s = scrollY, t0 = performance.now()
   await new Promise((res) => { const st = (n) => { const k = Math.min(1, (n - t0) / ms); scrollTo(0, s + by * (k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2)); k < 1 ? requestAnimationFrame(st) : res() }; requestAnimationFrame(st) })
 }, [by, ms])
-for (const [name, url] of [['home', 'https://uvsgames.com/'], ['cards', 'https://uvsgames.com/universus/cards/'], ['shop', 'https://shop.uvsgames.com/collections/all']]) {
+for (const [name, url] of [['home', 'https://uvsgames.com/'], ['riftbound', 'https://uvsgames.com/riftbound-organized-play/'], ['cards', 'https://uvsgames.com/universus/cards/'], ['shop', 'https://shop.uvsgames.com/collections/all']]) {
   await record(name, url, async (page) => {
     await wait(1200)
     for (let i = 0; i < 6; i++) { await smooth(page, 620, 1400); await wait(900) }

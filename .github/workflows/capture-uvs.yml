@@ -28,7 +28,7 @@ jobs:
       - name: Convert videos
         run: |
           cd /tmp/cap/out && mkdir -p rec
-          for n in home cards shop; do
+          for n in home riftbound cards shop; do
             ss=$(node -e "console.log(require('./marks.json')['$n']||0)")
             ffmpeg -nostdin -y -loglevel error -ss "$ss" -i raw/$n.webm -vf "fps=30,scale=780:-2:flags=lanczos" -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -movflags +faststart -an rec/$n.mp4 || true
           done
