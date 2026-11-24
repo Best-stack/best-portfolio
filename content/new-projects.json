@@ -716,7 +716,7 @@
             },
             {
               "video": {
-                "src": "uvs-games/mobile-nav-small.mp4",
+                "src": "uvs-games/mobile-nav.mp4",
                 "layout": "narrow",
                 "caption": "Mobile navigation — collapsible groups and a persistent shop button"
               }
@@ -808,30 +808,6 @@
                 "layout": "narrow",
                 "autoplay": true
               }
-            }
-          ]
-        },
-        {
-          "heading": "Organized Play hub",
-          "content": [
-            {
-              "p": "One hub explains how organized play works (play locally, grow your game, chase the spotlight) and splits into UniVersus, Riftbound and retailer paths."
-            },
-            {
-              "img": [
-                {
-                  "src": "uvs-games/d-op.jpg",
-                  "size": "full"
-                }
-              ]
-            },
-            {
-              "img": [
-                {
-                  "src": "uvs-games/m-op.jpg",
-                  "size": "full"
-                }
-              ]
             }
           ]
         },
