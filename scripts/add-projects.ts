@@ -10,6 +10,7 @@
  * - Puts the new case studies first on the Work page and shifts the existing ones after them
  *   (only their order number changes).
  */
+import { createHash } from 'node:crypto'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { basename, resolve } from 'node:path'
 
@@ -58,7 +59,11 @@ const data: { mediaBase: string; projects: NewProject[] } = JSON.parse(readFileS
 
 const CACHE_FILE = resolve('.migration-cache.json')
 const cache: Record<string, string> = existsSync(CACHE_FILE) ? JSON.parse(readFileSync(CACHE_FILE, 'utf8')) : {}
-const cacheKey = (src: string) => `${projectId}/${dataset}/media:${src}`
+// The key includes a hash of the file, so a changed file with the same name is uploaded again
+const hashes: Record<string, string> = {}
+const fileHash = (src: string) =>
+  (hashes[src] ??= createHash('sha1').update(readFileSync(resolve(data.mediaBase, src))).digest('hex').slice(0, 12))
+const cacheKey = (src: string) => `${projectId}/${dataset}/media:${src}#${fileHash(src)}`
 const isVideo = (src: string) => /\.(mp4|webm|mov)$/i.test(src)
 
 function collect(): string[] {
