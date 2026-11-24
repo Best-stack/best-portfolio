@@ -1,0 +1,43 @@
+name: Capture UVS site
+
+# Run manually. Screenshots the live UVS Games site (desktop + phone) and records short phone scrolls.
+# Results are saved on the "uvs-capture" branch.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser
+        run: |
+          mkdir -p /tmp/cap && cd /tmp/cap && npm init -y >/dev/null && npm i playwright@1.49.1 >/dev/null
+          npx playwright install --with-deps chromium
+          sudo apt-get install -y ffmpeg >/dev/null
+      - name: Capture
+        run: cp capture/uvs.mjs /tmp/cap/ && cd /tmp/cap && node uvs.mjs
+      - name: Convert videos
+        run: |
+          cd /tmp/cap/out && mkdir -p rec
+          for n in home cards shop; do
+            ss=$(node -e "console.log(require('./marks.json')['$n']||0)")
+            ffmpeg -nostdin -y -loglevel error -ss "$ss" -i raw/$n.webm -vf "fps=30,scale=780:-2:flags=lanczos" -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -movflags +faststart -an rec/$n.mp4 || true
+          done
+          rm -rf raw
+      - name: Save to uvs-capture branch
+        run: |
+          cd /tmp/cap/out
+          git init -q -b uvs-capture
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -qm "UVS capture"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" uvs-capture
