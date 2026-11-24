@@ -273,6 +273,22 @@
           ]
         },
         {
+          "heading": "In motion",
+          "content": [
+            {
+              "p": "Every page in Asyst documents a component the same way, and every component is designed for desktop, tablet and mobile from the start."
+            },
+            {
+              "video": {
+                "src": "asyst/responsive.mp4",
+                "caption": "Moving through the component list, then the event card and navigation adapting from desktop to mobile",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
           "heading": "Foundations",
           "content": [
             {
