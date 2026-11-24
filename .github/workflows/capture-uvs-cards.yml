@@ -1,0 +1,37 @@
+name: Capture UVS card hover
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install browser
+        run: |
+          mkdir -p /tmp/cap && cd /tmp/cap && npm init -y >/dev/null && npm i playwright@1.49.1 >/dev/null
+          npx playwright install --with-deps chromium
+          sudo apt-get install -y ffmpeg >/dev/null
+      - name: Record
+        run: cp capture/uvs-cards.mjs /tmp/cap/ && cd /tmp/cap && node uvs-cards.mjs
+      - name: Convert
+        run: |
+          cd /tmp/cap/out
+          ffmpeg -nostdin -y -loglevel error -ss "$(cat start.txt)" -i raw/cards-hover.webm -vf fps=30 -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -movflags +faststart -an cards-hover.mp4
+          rm -rf raw
+      - name: Save
+        run: |
+          cd /tmp/cap/out
+          git init -q -b uvs-cards-capture
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -qm "UVS card hover"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" uvs-cards-capture
