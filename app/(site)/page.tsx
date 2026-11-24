@@ -42,7 +42,7 @@ export default async function HomePage() {
       <section id="work" className="shots wrap-wide">
         <div className="shots__head">
           <h2>Selected works</h2>
-          <div className="label">({projects.length} case studies)</div>
+          <div className="label">({projects.length} case studies<span className="stack-hint"> · scroll the cards</span>)</div>
         </div>
         <WorkStack projects={projects} />
       </section>
