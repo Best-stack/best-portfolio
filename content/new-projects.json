@@ -1369,17 +1369,19 @@
     {
       "slug": "loop",
       "title": "Loop Tag",
-      "summary": "Brand site and app for Loop Tag — QR tags that let anyone return a lost item without either person sharing personal details.",
+      "summary": "A QR tag and app I designed so anyone can return a lost item, without the owner or the finder sharing a name, number or email.",
       "tags": [
         "Product",
         "Mobile App",
         "Web Design"
       ],
       "scope": [
-        "Landing page",
-        "Waitlist → store launch",
-        "iOS app: owner & finder flows",
-        "How it works page"
+        "Product flows",
+        "Information architecture",
+        "iOS app: owner flows",
+        "Finder web page",
+        "Escalation by SMS",
+        "Landing page and How it works page"
       ],
       "role": "Product & UI Design",
       "date": "2026",
@@ -1389,8 +1391,165 @@
       "hero": "loop/hero.jpg",
       "sections": [
         {
-          "heading": "V1 → Shipped",
+          "heading": "The idea",
           "content": [
+            {
+              "p": "Loop started with a simple question: if someone finds your bag, how do they get it back to you? Most people write their phone number on a luggage tag, which hands it to anyone who picks the bag up. Loop swaps the number for a QR code. A finder scans it, sends you a message, and you sort out the return in a private chat."
+            }
+          ]
+        },
+        {
+          "heading": "The problem",
+          "content": [
+            {
+              "p": "Finders want to help, but they won't download an app or make an account to do it. Owners want their stuff back, but not at the cost of putting their details on a tag. And if the owner doesn't reply in time, the item can sit in a lost-and-found and never come home."
+            }
+          ]
+        },
+        {
+          "heading": "The solution",
+          "content": [
+            {
+              "p": "I designed Loop around three people:"
+            },
+            {
+              "ul": [
+                "The finder scans the tag and lands on a web page. No app, no sign up. They type a message and that's it.",
+                "The owner gets the message in the app, chats with the finder, and can ask for a photo to check it's really their item.",
+                "An escalation contact, a friend or family member the owner picks, gets a text if the owner doesn't reply in time, so the item still gets home."
+              ]
+            },
+            {
+              "p": "Nobody's name, number or email is ever shown, and every conversation closes on its own after 72 hours."
+            }
+          ]
+        },
+        {
+          "heading": "Information architecture",
+          "content": [
+            {
+              "p": "I mapped every flow in FigJam before designing a screen. Only the owner needs an account, so the app holds everything, and the finder and escalation contact each get one short path."
+            },
+            {
+              "img": [
+                {
+                  "src": "loop/ia.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Getting started",
+          "content": [
+            {
+              "p": "Onboarding is one screen with one promise: a smarter way to recover lost items. You sign up with email or Google, then verify your email and phone so Loop can reach you when something is found."
+            },
+            {
+              "img": [
+                {
+                  "src": "loop/row-onboarding.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Activating a tag",
+          "content": [
+            {
+              "p": "Adding a tag takes four steps: scan the QR code, give it a nickname, pick a photo or an emoji, done. The emoji was a small thing I liked, it makes a list of tags easy to scan."
+            },
+            {
+              "video": {
+                "src": "loop/flow-activate.mp4",
+                "caption": "From an empty dashboard to a live tag",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "When someone finds it",
+          "content": [
+            {
+              "p": "This is the finder's side, and it runs in the browser. The page says what Loop is, promises their details stay private, and gives them one button. If anything feels off, either person can report the other."
+            },
+            {
+              "video": {
+                "src": "loop/flow-finder.mp4",
+                "caption": "The finder's path, on the web",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "The conversation",
+          "content": [
+            {
+              "p": "On the owner's side, each tag has its own conversations. A banner reminds both people not to share personal details. Owners can ask for a photo before they go and meet a stranger, and when the chat goes quiet for 72 hours it expires."
+            },
+            {
+              "video": {
+                "src": "loop/flow-chat.mp4",
+                "caption": "Chat, photo request and expiry",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "Escalation contacts",
+          "content": [
+            {
+              "p": "I added escalation contacts for owners who might miss a message, like someone on a flight. In tag settings you add a contact and pick 12, 24 or 48 hours. If you haven't replied by then, they get a text with a private link and can take over the chat."
+            },
+            {
+              "img": [
+                {
+                  "src": "loop/row-tag-settings.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Settings and edge cases",
+          "content": [
+            {
+              "p": "Settings covers the rest: profile, notifications, password and support. Destructive actions, like unlinking a tag or deactivating your account, get a clear warning first. I also designed the in-between states, like a tag that hasn't been set up yet or a tag with no messages."
+            },
+            {
+              "img": [
+                {
+                  "src": "loop/row-settings.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "loop/row-states.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The website",
+          "content": [
+            {
+              "p": "I designed the site too, from the waitlist page we launched with to the live store, plus a How it works page that walks through the three steps."
+            },
             {
               "compare": {
                 "before": "loop/before-home.jpg",
@@ -1399,36 +1558,7 @@
                 "afterLabel": "Live site",
                 "caption": "From a pre-launch waitlist page to the live store"
               }
-            }
-          ]
-        },
-        {
-          "heading": "The idea",
-          "content": [
-            {
-              "p": "Attach a tag, someone scans it, and you chat privately, with no phone number, email or address shared. My job was to make that promise obvious in seconds, on both the site and the app."
-            }
-          ]
-        },
-        {
-          "heading": "The app",
-          "content": [
-            {
-              "p": "I designed two flows: owners activate and manage tags, and finders scan and message without signing up."
             },
-            {
-              "img": [
-                {
-                  "src": "loop/app.jpg",
-                  "size": "full"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "heading": "How it works page",
-          "content": [
             {
               "img": [
                 {
@@ -1436,12 +1566,7 @@
                   "size": "full"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "heading": "Live on looptag.co",
-          "content": [
+            },
             {
               "img": [
                 {
