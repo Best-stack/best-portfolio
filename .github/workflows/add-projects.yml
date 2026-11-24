@@ -9,6 +9,10 @@ on:
         description: 'Dry run (check setup, write nothing)'
         type: boolean
         default: false
+      refresh:
+        description: 'Only update the sections of these case studies (slugs, comma-separated), e.g. aeon'
+        type: string
+        default: ''
 
 jobs:
   add:
@@ -31,7 +35,7 @@ jobs:
           restore-keys: migration-cache-
 
       - name: Add case studies
-        run: npx tsx scripts/add-projects.ts ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: npx tsx scripts/add-projects.ts ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.refresh != '' && format('--refresh={0}', inputs.refresh) || '' }}
         env:
           NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
           NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}

@@ -443,6 +443,8 @@
       "scope": [
         "Website redesign",
         "Information architecture",
+        "Symptom cards",
+        "Video content (Midjourney)",
         "Start-here quiz & booking",
         "Navigation by goal",
         "Aeon Shop"
@@ -486,22 +488,34 @@
           ]
         },
         {
-          "heading": "A clear first step",
+          "heading": "Start with how you feel",
           "content": [
             {
-              "p": "\"Start here\" lets visitors book a free consult straight away, or take a 5-question quiz that recommends a program."
+              "p": "The homepage asks how you feel before it talks about programs. Eight symptom cards cover muscle changes, weight, motivation, fatigue, libido, disease prevention, gut health and brain fog. Hover a card and its video plays while a short description slides up, so people recognise themselves in a few seconds."
             },
             {
-              "img": [
-                {
-                  "src": "aeon/start-here.jpg",
-                  "size": "half"
-                },
-                {
-                  "src": "aeon/quiz.jpg",
-                  "size": "half"
-                }
-              ]
+              "video": {
+                "src": "aeon/rec-cards.mp4",
+                "caption": "Hovering through the eight symptom cards on the homepage",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "Video made with Midjourney",
+          "content": [
+            {
+              "p": "I created the video content on the site with Midjourney, including all eight symptom loops. Each one is a visual metaphor instead of a stock clip of a patient: glowing muscle fibres for strength, a single ember for motivation, a figure dissolving into particles for fatigue, a lone walker in fog for brain fog. They're short, muted loops, so they add motion without getting in the way."
+            },
+            {
+              "video": {
+                "src": "aeon/midjourney-grid.mp4",
+                "caption": "The eight Midjourney loops used on the symptom cards",
+                "layout": "wide",
+                "autoplay": true
+              }
             }
           ]
         },
@@ -509,15 +523,15 @@
           "heading": "Navigation by goal",
           "content": [
             {
-              "p": "Programs and therapies are grouped by what the patient wants — feel better, prevent, recharge — instead of by clinic jargon."
+              "p": "Programs and therapies are grouped by what the patient wants (hormone changes, low energy, gut and mood, long-term health, strength and recovery) instead of by clinic jargon. One click opens the full menu."
             },
             {
-              "img": [
-                {
-                  "src": "aeon/menu.jpg",
-                  "size": "full"
-                }
-              ]
+              "video": {
+                "src": "aeon/rec-nav.mp4",
+                "caption": "Desktop navigation and the Programs by Symptom menu",
+                "layout": "wide",
+                "autoplay": true
+              }
             },
             {
               "img": [
@@ -527,6 +541,103 @@
                 },
                 {
                   "src": "aeon/home-full.jpg",
+                  "size": "half"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "A clear first step",
+          "content": [
+            {
+              "p": "\"Start here\" lets visitors book a free consult straight away, or take a 5-question quiz that ends with a recommended program and a way to book it."
+            },
+            {
+              "video": {
+                "src": "aeon/rec-quiz.mp4",
+                "caption": "The quiz, from first question to recommendation",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "What to expect",
+          "content": [
+            {
+              "p": "Every program page lays out the journey as five steps on a turning arc, from the free first call to reviewing next steps, so patients know what happens before they book."
+            },
+            {
+              "video": {
+                "src": "aeon/rec-steps.mp4",
+                "caption": "The What to expect steps on a program page",
+                "layout": "wide",
+                "autoplay": true
+              }
+            }
+          ]
+        },
+        {
+          "heading": "More of the site",
+          "content": [
+            {
+              "img": [
+                {
+                  "src": "aeon/sec-paths.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aeon/sec-quote.jpg",
+                  "size": "half"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "aeon/sec-programs.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aeon/sec-symptoms.jpg",
+                  "size": "half"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "aeon/page-mens.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aeon/page-womens.jpg",
+                  "size": "half"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "aeon/page-program.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aeon/page-pricing.jpg",
+                  "size": "half"
+                }
+              ]
+            },
+            {
+              "img": [
+                {
+                  "src": "aeon/sec-talk.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aeon/sec-footer.jpg",
                   "size": "half"
                 }
               ]

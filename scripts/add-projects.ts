@@ -23,6 +23,11 @@ config({ quiet: true })
 
 const DRY = process.argv.includes('--dry-run')
 const FORCE = process.argv.includes('--force')
+// --refresh=aeon,uvs-games → only replace the sections (and summary/scope) of those case studies; nothing else changes
+const REFRESH = (process.argv.find((a) => a.startsWith('--refresh='))?.split('=')[1] ?? '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean)
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 const token = process.env.SANITY_API_WRITE_TOKEN
@@ -110,12 +115,42 @@ async function main() {
   const newIds = new Set(data.projects.map((p) => `project-${p.slug}`))
   const present = new Set(existing.map((e) => e._id))
 
+  if (REFRESH.length) {
+    data.projects = data.projects.filter((p) => REFRESH.includes(p.slug))
+    if (!data.projects.length) fail(`No case study matches --refresh=${REFRESH.join(',')}`)
+  }
+
   await uploadAll(collect())
 
   let k = 0
   const key = () => `n${(++k).toString(36)}`
   const tx = client.transaction()
   let created = 0
+
+  if (REFRESH.length) {
+    for (const p of data.projects) {
+      const _id = `project-${p.slug}`
+      if (!present.has(_id)) fail(`${p.title} isn't in Sanity yet — run without --refresh first`)
+      const old = await client.fetch(`*[_id == $id][0]{ summary, scope, sections }`, { id: _id })
+      console.log(`  • Backup of ${p.title} before refresh:\n${JSON.stringify(old)}\n`)
+      tx.patch(_id, (patch) =>
+        patch.set({
+          summary: p.summary,
+          scope: p.scope,
+          sections: p.sections.map((s) => ({
+            _key: key(),
+            _type: 'caseSection',
+            heading: s.heading,
+            body: seedToPortableText(s.content, (src) => ref(src), (src) => ref(src)),
+          })),
+        }),
+      )
+      console.log(`  • Refreshing sections of ${p.title}`)
+    }
+    if (DRY) return console.log('\nDry run complete — nothing was written.')
+    await tx.commit()
+    return console.log('\n✓ Done. Changes are live within a minute.')
+  }
 
   data.projects.forEach((p, i) => {
     const _id = `project-${p.slug}`
