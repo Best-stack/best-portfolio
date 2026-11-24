@@ -1115,18 +1115,21 @@
     {
       "slug": "aaif",
       "title": "Agentic AI Foundation",
-      "summary": "The website for the Agentic AI Foundation — the Linux Foundation home of MCP, goose and AGENTS.md — rebuilt around projects, events and community.",
+      "summary": "I redesigned the website for the Agentic AI Foundation, the Linux Foundation home of MCP, goose and AGENTS.md, and kept designing new pages as the foundation grew.",
       "tags": [
         "AI",
         "Web Design",
         "UI/UX"
       ],
       "scope": [
+        "Website redesign",
         "Homepage",
         "AAIF Landscape",
-        "Events & map view",
-        "Chatbot search",
-        "Mobile layouts"
+        "Events",
+        "Community Chapters",
+        "Maintainer Benefits",
+        "Excellence Awards",
+        "Mobile for every page"
       ],
       "role": "UI/UX Design",
       "date": "2026",
@@ -1136,25 +1139,54 @@
       "hero": "aaif/hero.jpg",
       "sections": [
         {
-          "heading": "Before → After",
+          "heading": "The problem",
           "content": [
             {
-              "compare": {
-                "before": "aaif/before-mobile.jpg",
-                "after": "aaif/after-mobile.jpg",
-                "beforeLabel": "Launch site",
-                "afterLabel": "Today",
-                "layout": "narrow",
-                "caption": "aaif.io on mobile — the December 2025 launch site vs. the live redesign"
-              }
+              "p": "The foundation launched in December 2025 with a simple site that explained what AAIF was. As the community grew, it needed somewhere people would come back to: to find projects, events, groups near them and ways to get involved. The launch site wasn't built for that."
             }
           ]
         },
         {
-          "heading": "The problem",
+          "heading": "What I did",
           "content": [
             {
-              "p": "The launch site introduced the foundation. With the redesign, I turned it into a hub people come back to for projects, events and community."
+              "p": "I redesigned the site and kept adding to it as new needs came up."
+            },
+            {
+              "ul": [
+                "Redesigned the homepage around getting involved, with events, community groups and projects front and centre",
+                "Designed the AAIF Landscape, a directory of agentic AI projects people can filter and browse",
+                "Redesigned events, with a grid, calendar and map view, and a hero search that answers questions",
+                "Designed new pages as the foundation launched new programs: Community Chapters, Maintainer Benefits, the Technical Excellence Awards and the Slack invite",
+                "Designed a mobile version of every page"
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Homepage",
+          "content": [
+            {
+              "compare": {
+                "before": "aaif/b-home.jpg",
+                "after": "aaif/a-home.jpg",
+                "beforeLabel": "Launch site",
+                "afterLabel": "Redesign",
+                "caption": "The homepage, before and after",
+                "layout": "wide"
+              }
+            },
+            {
+              "img": [
+                {
+                  "src": "aaif/home-new-full.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aaif/after-mobile.jpg",
+                  "size": "half"
+                }
+              ]
             }
           ]
         },
@@ -1162,44 +1194,60 @@
           "heading": "AAIF Landscape",
           "content": [
             {
-              "p": "I designed a filterable directory of agentic AI projects, grouped by application and capability."
+              "p": "The launch site listed three projects. I turned it into a landscape of the whole ecosystem, grouped by application and capability, with filters and stats."
             },
             {
-              "img": [
-                {
-                  "src": "aaif/landscape.jpg",
-                  "size": "full"
-                }
-              ]
+              "compare": {
+                "before": "aaif/b-projects.jpg",
+                "after": "aaif/a-landscape.jpg",
+                "beforeLabel": "Launch site",
+                "afterLabel": "Redesign",
+                "caption": "Projects, before and after",
+                "layout": "wide"
+              }
             }
           ]
         },
         {
-          "heading": "Events, on a map",
+          "heading": "Events",
           "content": [
             {
-              "p": "I made foundation events, community events and groups browsable as a grid, a calendar or a map."
+              "p": "Events went from a short list to a hub for foundation events, community events and groups, browsable as a grid, a calendar or a map. The hero search lets people just ask, like \"Any upcoming events in Toronto?\""
+            },
+            {
+              "compare": {
+                "before": "aaif/b-events.jpg",
+                "after": "aaif/a-events.jpg",
+                "beforeLabel": "Launch site",
+                "afterLabel": "Redesign",
+                "caption": "Events, before and after",
+                "layout": "wide"
+              }
             },
             {
               "img": [
                 {
                   "src": "aaif/events.jpg",
-                  "size": "full"
+                  "size": "half"
+                },
+                {
+                  "src": "aaif/chatbot.jpg",
+                  "size": "half"
                 }
               ]
             }
           ]
         },
         {
-          "heading": "Ask the site",
+          "heading": "Community Chapters",
           "content": [
             {
-              "p": "I turned the hero search into a chatbot for questions like \"Any upcoming events in Toronto?\""
+              "p": "Each chapter gets a cover with a line drawing of its city's landmark, so a long list of chapters feels local."
             },
             {
               "img": [
                 {
-                  "src": "aaif/chatbot.jpg",
+                  "src": "aaif/chapters.jpg",
                   "size": "full"
                 }
               ]
@@ -1207,13 +1255,33 @@
           ]
         },
         {
-          "heading": "The homepage",
+          "heading": "Maintainer Benefits",
+          "content": [
+            {
+              "p": "This page explains what a project gets at each stage, from Sandbox to Growth to Impact, with a catalog maintainers can filter by stage."
+            },
+            {
+              "img": [
+                {
+                  "src": "aaif/maintainer.jpg",
+                  "size": "full"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "More pages",
           "content": [
             {
               "img": [
                 {
-                  "src": "aaif/home-full.jpg",
-                  "size": "full"
+                  "src": "aaif/awards.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "aaif/slack.jpg",
+                  "size": "half"
                 }
               ]
             }
