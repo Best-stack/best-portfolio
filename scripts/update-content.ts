@@ -24,9 +24,9 @@ type Job = { _key: string; years?: string; role?: string; company?: string; loca
 
 const JOBS: { match: RegExp; set: Partial<Job> }[] = [
   { match: /aladdin/i, set: { years: '2021 — 2023' } },
-  { match: /delit/i, set: { years: '2022 · Contract' } },
-  { match: /first\s*founders/i, set: { years: '2019 — 2021', location: 'Lagos, Nigeria' } },
+  { match: /delit/i, set: { years: '2022', role: 'User Experience Designer (Contract)' } },
 ]
+const FIRST_FOUNDERS = { years: '2019 — 2021', role: 'UX Designer', company: 'FirstFounders Inc', location: 'Lagos, Nigeria' }
 
 async function main() {
   const tx = client.transaction()
@@ -36,18 +36,19 @@ async function main() {
   if (s?.role !== 'Product & Web Designer') tx.patch('siteSettings', (p) => p.set({ role: 'Product & Web Designer' }))
 
   const about = await client.fetch<{ experience?: Job[] } | null>(`*[_id == "aboutPage"][0]{ experience }`)
+  const jobs = (about?.experience ?? []).map((j) => ({ ...j }))
   console.log('  • Experience now:')
-  for (const j of about?.experience ?? []) console.log(`      ${j.years} | ${j.role} | ${j.company} | ${j.location ?? ''}`)
+  for (const j of jobs) console.log(`      ${j.years} | ${j.role} | ${j.company} | ${j.location ?? ''}`)
   for (const { match, set } of JOBS) {
-    const j = (about?.experience ?? []).find((x) => match.test(`${x.company} ${x.role}`))
-    if (!j) {
-      console.log(`  • No job matching ${match} — skipped`)
-      continue
-    }
-    const fields = Object.fromEntries(Object.entries(set).map(([k, v]) => [`experience[_key=="${j._key}"].${k}`, v]))
-    tx.patch('aboutPage', (p) => p.set(fields))
-    console.log(`  • ${j.company}: ${JSON.stringify(set)}`)
+    const j = jobs.find((x) => match.test(`${x.company} ${x.role}`))
+    if (j) Object.assign(j, set)
   }
+  if (!jobs.some((j) => /first\s*founders/i.test(j.company ?? ''))) jobs.push({ _key: 'firstfounders', _type: 'job', ...FIRST_FOUNDERS } as Job)
+  const start = (j: Job) => Number((j.years ?? '').match(/\d{4}/)?.[0] ?? 0)
+  jobs.sort((x, y) => start(y) - start(x))
+  console.log('  • Experience after:')
+  for (const j of jobs) console.log(`      ${j.years} | ${j.role} | ${j.company} | ${j.location ?? ''}`)
+  tx.patch('aboutPage', (p) => p.set({ experience: jobs }))
 
   const oxy = await client.fetch<Record<string, unknown> | null>(`*[_id == "project-oxy"][0]`)
   if (oxy) {
