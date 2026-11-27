@@ -42,7 +42,6 @@ export default async function CaseStudyPage({ params }: Params) {
   const meta = [
     ['Role', project.role],
     ['Date', project.date],
-    ['Team', project.contributors],
   ].filter(([, v]) => v) as [string, string][]
 
   return (
@@ -71,13 +70,6 @@ export default async function CaseStudyPage({ params }: Params) {
 
         <section className="case-intro wrap">
           {project.summary && <h2>{project.summary}</h2>}
-          {project.scope && project.scope.length > 0 && (
-            <ul className="scope" aria-label="What I did">
-              {project.scope.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
-          )}
           <dl className="meta">
             {meta.map(([k, v]) => (
               <div key={k}>
@@ -106,7 +98,7 @@ export default async function CaseStudyPage({ params }: Params) {
           {project.sections.map((s, i) => (
             <section key={`${s.heading}-${i}`} className="case-section">
               <div className="case-section__head">
-                <div className="lbl" aria-hidden="true" />
+                <div className="lbl">({String(i + 1).padStart(2, '0')})</div>
                 <h2>{s.heading}</h2>
               </div>
               <CaseBody value={s.body} />
