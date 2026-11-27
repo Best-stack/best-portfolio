@@ -42,7 +42,7 @@ export default async function CaseStudyPage({ params }: Params) {
   const meta = [
     ['Role', project.role],
     ['Date', project.date],
-    ['Contributors', project.contributors],
+    ['Team', project.contributors],
   ].filter(([, v]) => v) as [string, string][]
 
   return (
@@ -106,7 +106,7 @@ export default async function CaseStudyPage({ params }: Params) {
           {project.sections.map((s, i) => (
             <section key={`${s.heading}-${i}`} className="case-section">
               <div className="case-section__head">
-                <div className="lbl">({String(i + 1).padStart(2, '0')})</div>
+                <div className="lbl" aria-hidden="true" />
                 <h2>{s.heading}</h2>
               </div>
               <CaseBody value={s.body} />

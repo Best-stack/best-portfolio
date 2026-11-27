@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: { default: 'Best Omotayo — Product Designer', template: '%s — Best Omotayo' },
-  description: 'Best Omotayo is a product designer in Toronto designing intuitive, human-centric experiences.',
+  title: { default: 'Best Omotayo — Product & Web Designer', template: '%s — Best Omotayo' },
+  description: 'Best Omotayo is a product and web designer in Toronto designing intuitive, human-centric experiences.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

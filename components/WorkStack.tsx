@@ -30,7 +30,7 @@ function splitTitle(title: string): [string, string] {
   return [words[0], words.slice(1).join(' ')]
 }
 
-function StackCard({ project, index, eager }: { project: ProjectCard; index: number; eager: boolean }) {
+function StackCard({ project, eager }: { project: ProjectCard; index: number; eager: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -58,7 +58,6 @@ function StackCard({ project, index, eager }: { project: ProjectCard; index: num
           <h3 className="stack-card__title">
             <span>{lead}</span> {trail && <span className="stack-card__trail">{trail}</span>}
           </h3>
-          <span className="stack-card__no">{String(index + 1).padStart(2, '0')}</span>
         </div>
         <div className="stack-card__foot">
           {project.tags.length > 0 && (
