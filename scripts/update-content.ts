@@ -35,6 +35,11 @@ async function main() {
   console.log(`  • Hero role now: ${s?.role}`)
   if (s?.role !== 'Product & Web Designer') tx.patch('siteSettings', (p) => p.set({ role: 'Product & Web Designer' }))
 
+  const home = await client.fetch<{ _id: string; heroRoles?: string[] } | null>(`*[defined(heroRoles)][0]{ _id, heroRoles }`)
+  console.log(`  • Hero roles now: ${JSON.stringify(home?.heroRoles)}`)
+  if (home?.heroRoles?.some((r) => /lead product/i.test(r)))
+    tx.patch(home._id, (p) => p.set({ heroRoles: home.heroRoles!.map((r) => r.replace(/lead product/i, 'Product')) }))
+
   const about = await client.fetch<{ experience?: Job[] } | null>(`*[_id == "aboutPage"][0]{ experience }`)
   const jobs = (about?.experience ?? []).map((j) => ({ ...j }))
   console.log('  • Experience now:')
