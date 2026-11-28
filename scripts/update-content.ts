@@ -6,6 +6,8 @@
  */
 import { createClient } from '@sanity/client'
 import { config } from 'dotenv'
+import { createHash } from 'node:crypto'
+import { readFileSync } from 'node:fs'
 
 config({ path: '.env.local', quiet: true })
 config({ quiet: true })
@@ -58,6 +60,24 @@ async function main() {
   if (heirs && heirs.previewUrl !== 'https://www.heirsinsurancegroup.com/') {
     tx.patch(heirs._id, (p) => p.set({ previewUrl: 'https://www.heirsinsurancegroup.com/' }))
     console.log(`  • Heirs Life link set (${heirs._id})`)
+  }
+
+  // New card covers (the image replaces the card video)
+  const COVERS: Record<string, string> = {
+    'project-uvs-games': 'content/media/covers/uvs.jpg',
+    'project-aaif': 'content/media/covers/aaif.jpg',
+    'project-aeon': 'content/media/covers/aeon.jpg',
+    'project-loop': 'content/media/covers/loop.jpg',
+  }
+  for (const [id, file] of Object.entries(COVERS)) {
+    const buf = readFileSync(file)
+    const hash = createHash('sha1').update(buf).digest('hex').slice(0, 12)
+    const cur = await client.fetch<{ label?: string; vid?: string } | null>(`*[_id == $id][0]{ "label": cover.asset->label, "vid": cardVideo.asset._ref }`, { id })
+    if (cur?.label === `cover-${hash}` && !cur.vid) continue
+    if (DRY) { console.log(`  • Would set new cover on ${id}`); continue }
+    const asset = await client.assets.upload('image', buf, { filename: file.split('/').pop(), label: `cover-${hash}` })
+    tx.patch(id, (p) => p.set({ cover: { _type: 'image', asset: { _type: 'reference', _ref: asset._id } } }).unset(['cardVideo']))
+    console.log(`  • New cover on ${id}`)
   }
 
   const home = await client.fetch<{ _id: string; heroRoles?: string[] } | null>(`*[defined(heroRoles)][0]{ _id, heroRoles }`)
