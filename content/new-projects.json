@@ -349,20 +349,53 @@
             {
               "img": [
                 {
-                  "src": "asyst/event-card.jpg",
-                  "size": "half"
-                },
+                  "src": "asyst/comp-buttons.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "p": "Buttons come with all four states: static, hover, disabled and pressed."
+            },
+            {
+              "img": [
                 {
-                  "src": "asyst/podcasts.jpg",
-                  "size": "half"
+                  "src": "asyst/comp-nav-desktop.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "p": "The navigation opens into a mega menu on desktop with links and an image, and folds into a full-screen menu on mobile."
+            },
+            {
+              "img": [
+                {
+                  "src": "asyst/comp-events.jpg",
+                  "size": "full"
+                }
+              ]
+            },
+            {
+              "p": "The events component pairs a calendar with upcoming meetups and featured events. On mobile, the calendar stays on top and the featured event drops below it."
+            },
+            {
+              "img": [
+                {
+                  "src": "asyst/comp-mobile.jpg",
+                  "size": "full"
                 }
               ]
             },
             {
               "img": [
                 {
-                  "src": "asyst/buttons.jpg",
-                  "size": "full"
+                  "src": "asyst/event-card.jpg",
+                  "size": "half"
+                },
+                {
+                  "src": "asyst/podcasts.jpg",
+                  "size": "half"
                 }
               ]
             }

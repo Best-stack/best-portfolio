@@ -40,6 +40,20 @@ async function main() {
   if (aaif && (aaif.title !== 'Linux - Agentic AI Foundation' || aaif.cardTitle !== 'Linux - AAIF'))
     tx.patch('project-aaif', (p) => p.set({ title: 'Linux - Agentic AI Foundation', cardTitle: 'Linux - AAIF' }))
 
+  // FCMB: move the redesigned dashboard after the identified problems and the previous dashboard
+  const fcmb = await client.fetch<{ sections?: { _key: string; heading?: string; body?: { _key: string }[] }[] } | null>(`*[_id == "project-fcmb"][0]{ sections }`)
+  if (fcmb?.sections) {
+    const from = fcmb.sections.find((s) => s._key === 'mz')
+    const to = fcmb.sections.find((s) => s._key === 'm10')
+    const moving = from?.body?.find((b) => b._key === 'r71ma10')
+    if (from && to && moving) {
+      from.body = from.body!.filter((b) => b._key !== 'r71ma10')
+      to.body = [...(to.body ?? []), moving]
+      tx.patch('project-fcmb', (p) => p.set({ sections: fcmb.sections }))
+      console.log('  • FCMB: moved the redesigned dashboard after the previous dashboard')
+    } else console.log('  • FCMB: already moved — skipped')
+  }
+
   const home = await client.fetch<{ _id: string; heroRoles?: string[] } | null>(`*[defined(heroRoles)][0]{ _id, heroRoles }`)
   console.log(`  • Hero roles now: ${JSON.stringify(home?.heroRoles)}`)
   if (home?.heroRoles?.some((r) => /lead product/i.test(r)))
