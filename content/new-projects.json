@@ -122,20 +122,26 @@
           "heading": "Sections that move",
           "content": [
             {
-              "p": "I gave each section one idea and a small animated figure to explain it, instead of stock imagery. Hover the problem figures and the same work stacks up, the platforms split apart and the tools pile up. In the solution, the disconnected sites link up and a tile drops into one shared grid."
+              "p": "Instead of stock photos, I gave each section a small animation that shows the point it's making."
+            },
+            {
+              "p": "The problem section has three cards, one for each thing that goes wrong when a company runs lots of websites: the same work gets done over and over, every site ends up on a different platform, and the tools keep piling up. Hover a card and its animation plays."
             },
             {
               "video": {
                 "src": "anyday/rec-landing-problem.mp4",
-                "caption": "The problem: three figures that animate on hover",
+                "caption": "The problem section: hover a card to play its animation",
                 "layout": "wide",
                 "autoplay": true
               }
             },
             {
+              "p": "The solution section answers that. The separate sites join up, and a new piece drops into one shared grid, because with Anyday one update reaches every site."
+            },
+            {
               "video": {
                 "src": "anyday/rec-landing-solution.mp4",
-                "caption": "The solution: disconnected sites connect, then one tile drops into place",
+                "caption": "The solution section: separate sites join up into one system",
                 "layout": "wide",
                 "autoplay": true
               }
