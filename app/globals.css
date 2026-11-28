@@ -395,3 +395,6 @@ a:hover { opacity: 0.7; }
 @media (hover: hover) and (pointer: fine) and (min-width: 901px) { .stack-hint { display: inline; } }
 .home-sec .jobs { margin-top: 0; }
 .home-sec .jobs li:first-child { border-top: 0; padding-top: 0; }
+/* Philosophy rules line up with the other homepage dividers */
+.philosophy { margin: 0 max(var(--gutter), calc((100% - 1360px) / 2 + var(--gutter))); }
+.philosophy > div { max-width: none; }
