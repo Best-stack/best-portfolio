@@ -68,6 +68,7 @@ async function main() {
     'project-aaif': 'content/media/covers/aaif.jpg',
     'project-aeon': 'content/media/covers/aeon.jpg',
     'project-loop': 'content/media/covers/loop.jpg',
+    'project-asyst': 'content/media/covers/asyst.jpg',
   }
   for (const [id, file] of Object.entries(COVERS)) {
     const buf = readFileSync(file)
