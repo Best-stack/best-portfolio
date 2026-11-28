@@ -24,7 +24,7 @@ async function query<T>(groq: string, params: Record<string, unknown> = {}): Pro
 }
 
 const IMG = `{ "url": asset->url, "alt": alt, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height }`
-const CARD = `"slug": slug.current, title, summary, "tags": coalesce(tags, []), "cover": cover${IMG}, "video": cardVideo.asset->url`
+const CARD = `"slug": slug.current, "title": coalesce(cardTitle, title), summary, "tags": coalesce(tags, []), "cover": cover${IMG}, "video": cardVideo.asset->url`
 
 /* ------------------------------------------------------------------ */
 /* Local fallback (content/seed.json) — used until Sanity is set up    */
@@ -149,7 +149,7 @@ export async function getProject(slug: string): Promise<Project | null> {
   }
   return query<Project | null>(
     `*[_type == "project" && slug.current == $slug][0]{
-      ${CARD}, "scope": coalesce(scope, []), role, date, contributors, previewUrl, previewLabel, "hero": hero${IMG},
+      ${CARD}, title, "scope": coalesce(scope, []), role, date, contributors, previewUrl, previewLabel, "hero": hero${IMG},
       "sections": coalesce(sections[]{ heading, "body": coalesce(body[]{
         ...,
         _type == "imageRow" => { "images": images[]{ _key, size, alt, "url": asset->url, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height } },

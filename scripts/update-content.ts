@@ -35,6 +35,11 @@ async function main() {
   console.log(`  • Hero role now: ${s?.role}`)
   if (s?.role !== 'Product & Web Designer') tx.patch('siteSettings', (p) => p.set({ role: 'Product & Web Designer' }))
 
+  const aaif = await client.fetch<{ title?: string; cardTitle?: string } | null>(`*[_id == "project-aaif"][0]{ title, cardTitle }`)
+  console.log(`  • AAIF now: ${JSON.stringify(aaif)}`)
+  if (aaif && (aaif.title !== 'Linux - Agentic AI Foundation' || aaif.cardTitle !== 'Linux - AAIF'))
+    tx.patch('project-aaif', (p) => p.set({ title: 'Linux - Agentic AI Foundation', cardTitle: 'Linux - AAIF' }))
+
   const home = await client.fetch<{ _id: string; heroRoles?: string[] } | null>(`*[defined(heroRoles)][0]{ _id, heroRoles }`)
   console.log(`  • Hero roles now: ${JSON.stringify(home?.heroRoles)}`)
   if (home?.heroRoles?.some((r) => /lead product/i.test(r)))

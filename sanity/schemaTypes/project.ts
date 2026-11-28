@@ -196,7 +196,14 @@ export const project = defineType({
   ],
   orderings: [{ title: 'Manual order', name: 'order', by: [{ field: 'order', direction: 'asc' }] }],
   fields: [
-    defineField({ name: 'title', type: 'string', group: 'card', validation: (r) => r.required() }),
+    defineField({ name: 'title', type: 'string', group: 'card', description: 'Full name, shown on the case study page.', validation: (r) => r.required() }),
+    defineField({
+      name: 'cardTitle',
+      title: 'Short name for cards',
+      type: 'string',
+      group: 'card',
+      description: 'Optional. Shown on project cards and lists instead of the full name.',
+    }),
     defineField({
       name: 'slug',
       type: 'slug',
