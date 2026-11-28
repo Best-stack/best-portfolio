@@ -20,7 +20,7 @@ export default async function HomePage() {
         settings={settings}
       />
 
-      <section id="about" className="intro wrap-wide">
+      <section id="about" className="home-sec wrap-wide">
         <div className="two-col">
           <div className="label">(About)</div>
           <div className="stack">
@@ -37,14 +37,20 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <Experience jobs={about.experience} className="home-experience wrap-wide" />
+      <Experience jobs={about.experience} className="home-sec home-sec--rule wrap-wide" />
 
-      <section id="work" className="shots wrap-wide">
-        <div className="shots__head">
-          <h2>Selected works</h2>
-          <div className="label">({projects.length} case studies<span className="stack-hint"> · scroll the cards</span>)</div>
+      <section id="work" className="home-sec home-sec--rule wrap-wide">
+        <div className="two-col">
+          <div className="label">
+            (Selected works)
+            <span className="home-sec__note">
+              {projects.length} case studies<span className="stack-hint"> · scroll the cards</span>
+            </span>
+          </div>
+          <div className="home-sec__body">
+            <WorkStack projects={projects} />
+          </div>
         </div>
-        <WorkStack projects={projects} />
       </section>
 
       {home.philosophy && (
@@ -57,12 +63,13 @@ export default async function HomePage() {
       )}
 
       {home.shots.length > 0 && (
-        <section className="shots wrap-wide">
-          <div className="shots__head">
-            <h2>Shots</h2>
-            <div className="label">(Motion &amp; explorations)</div>
+        <section className="home-sec shots-home wrap-wide">
+          <div className="two-col">
+          <div className="label">
+            (Shots)
+            <span className="home-sec__note">Motion &amp; explorations</span>
           </div>
-          <div className="shots__grid">
+          <div className="shots__grid home-sec__body">
             {home.shots.map((s) => (
               <figure key={s.title}>
                 {s.image?.url && (
@@ -75,6 +82,7 @@ export default async function HomePage() {
                 </figcaption>
               </figure>
             ))}
+          </div>
           </div>
         </section>
       )}
