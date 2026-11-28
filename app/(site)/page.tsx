@@ -1,7 +1,9 @@
 import { Experience } from '@/components/Experience'
 import { Hero } from '@/components/Hero'
 import { SiteHeader } from '@/components/SiteHeader'
+import { Testimonials } from '@/components/Testimonials'
 import { WorkStack } from '@/components/WorkStack'
+import { TESTIMONIALS } from '@/lib/testimonials'
 import { getAbout, getHome, getProjects, getSettings } from '@/lib/content'
 import { imgSrc } from '@/lib/img'
 
@@ -39,16 +41,23 @@ export default async function HomePage() {
 
       <Experience jobs={about.experience} className="home-sec home-sec--rule wrap-wide" />
 
-      <section id="work" className="home-sec home-sec--rule wrap-wide">
+      <section id="work" className="home-sec home-sec--rule home-sec--works wrap-wide">
         <div className="two-col">
           <div className="label">
             (Selected works)
-            <span className="home-sec__note">
-              {projects.length} case studies<span className="stack-hint"> · scroll the cards</span>
-            </span>
+            <span className="home-sec__note">{projects.length} case studies</span>
           </div>
+        </div>
+      </section>
+      <div className="stack-full">
+        <WorkStack projects={projects} />
+      </div>
+
+      <section className="home-sec home-sec--rule wrap-wide">
+        <div className="two-col">
+          <div className="label">(Testimonials)</div>
           <div className="home-sec__body">
-            <WorkStack projects={projects} />
+            <Testimonials items={TESTIMONIALS} />
           </div>
         </div>
       </section>
