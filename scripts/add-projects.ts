@@ -154,6 +154,7 @@ async function main() {
         patch.set({
           summary: p.summary,
           scope: p.scope,
+          hero: { _type: 'image', ...ref(p.hero) },
           ...(p.previewUrl ? { previewUrl: p.previewUrl } : {}),
           sections: p.sections.map((s) => ({
             _key: key(),
