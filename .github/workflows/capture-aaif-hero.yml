@@ -21,7 +21,7 @@ jobs:
           npx playwright install --with-deps chromium
           sudo apt-get install -y ffmpeg >/dev/null
       - name: Record
-        run: cp capture/aaif-hero-hq.mjs /tmp/cap/ && cd /tmp/cap && node aaif-hero-hq.mjs
+        run: cp capture/aaif-hero-hq.mjs /tmp/cap/ && cd /tmp/cap && URL='https://web.archive.org/web/20261115000000if_/https://aaif.io/' node aaif-hero-hq.mjs
       - name: Convert
         run: |
           cd /tmp/cap/out
