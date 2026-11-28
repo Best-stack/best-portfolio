@@ -54,6 +54,12 @@ async function main() {
     } else console.log('  • FCMB: already moved — skipped')
   }
 
+  const heirs = await client.fetch<{ _id: string; previewUrl?: string } | null>(`*[_type == "project" && !(_id in path("drafts.**")) && title match "Heirs*"][0]{ _id, previewUrl }`)
+  if (heirs && heirs.previewUrl !== 'https://www.heirsinsurancegroup.com/') {
+    tx.patch(heirs._id, (p) => p.set({ previewUrl: 'https://www.heirsinsurancegroup.com/' }))
+    console.log(`  • Heirs Life link set (${heirs._id})`)
+  }
+
   const home = await client.fetch<{ _id: string; heroRoles?: string[] } | null>(`*[defined(heroRoles)][0]{ _id, heroRoles }`)
   console.log(`  • Hero roles now: ${JSON.stringify(home?.heroRoles)}`)
   if (home?.heroRoles?.some((r) => /lead product/i.test(r)))
