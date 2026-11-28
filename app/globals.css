@@ -393,3 +393,5 @@ a:hover { opacity: 0.7; }
 @media (max-width: 760px) { .home-sec > .two-col { padding: 56px 0; } }
 .stack-hint { display: none; }
 @media (hover: hover) and (pointer: fine) and (min-width: 901px) { .stack-hint { display: inline; } }
+.home-sec .jobs { margin-top: 0; }
+.home-sec .jobs li:first-child { border-top: 0; padding-top: 0; }
