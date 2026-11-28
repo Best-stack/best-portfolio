@@ -15,10 +15,12 @@ export default async function WorkPage() {
       <section className="shots wrap-wide">
         <div className="shots__head">
           <h1>Selected works</h1>
-          <div className="label">({projects.length} case studies<span className="stack-hint"> · scroll the cards</span>)</div>
+          <div className="label">({projects.length} case studies)</div>
         </div>
-        <WorkStack projects={projects} />
       </section>
+      <div className="stack-full">
+        <WorkStack projects={projects} />
+      </div>
     </>
   )
 }
