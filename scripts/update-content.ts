@@ -70,6 +70,8 @@ async function main() {
     'project-loop': 'content/media/covers/loop.jpg',
     'project-asyst': 'content/media/covers/asyst.jpg',
   }
+  // Which part of the cover stays in view when the card crops it
+  const FOCUS: Record<string, [number, number]> = { 'project-asyst': [0.78, 0.82] }
   for (const [id, file] of Object.entries(COVERS)) {
     const buf = readFileSync(file)
     const hash = createHash('sha1').update(buf).digest('hex').slice(0, 12)
@@ -77,7 +79,8 @@ async function main() {
     if (cur?.label === `cover-${hash}` && !cur.vid) continue
     if (DRY) { console.log(`  • Would set new cover on ${id}`); continue }
     const asset = await client.assets.upload('image', buf, { filename: file.split('/').pop(), label: `cover-${hash}` })
-    tx.patch(id, (p) => p.set({ cover: { _type: 'image', asset: { _type: 'reference', _ref: asset._id } } }).unset(['cardVideo']))
+    const hotspot = FOCUS[id] ? { hotspot: { _type: 'sanity.imageHotspot', x: FOCUS[id][0], y: FOCUS[id][1], width: 1, height: 1 } } : {}
+    tx.patch(id, (p) => p.set({ cover: { _type: 'image', asset: { _type: 'reference', _ref: asset._id }, ...hotspot } }).unset(['cardVideo']))
     console.log(`  • New cover on ${id}`)
   }
 

@@ -23,7 +23,7 @@ async function query<T>(groq: string, params: Record<string, unknown> = {}): Pro
   return client.fetch<T>(groq, params, { next: { revalidate: REVALIDATE } })
 }
 
-const IMG = `{ "url": asset->url, "alt": alt, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height }`
+const IMG = `{ "url": asset->url, "alt": alt, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height, "fx": hotspot.x, "fy": hotspot.y }`
 const CARD = `"slug": slug.current, "title": coalesce(cardTitle, title), summary, "tags": coalesce(tags, []), "cover": cover${IMG}, "video": cardVideo.asset->url`
 
 /* ------------------------------------------------------------------ */

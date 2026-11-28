@@ -73,6 +73,11 @@ function StackCard({ project, eager }: { project: ProjectCard; eager: boolean })
   }, [])
 
   const poster = imgSrc(project.cover, 1800)
+  // The hotspot set in Sanity Studio decides which part of the cover stays in view
+  const focus =
+    project.cover?.fx != null && project.cover?.fy != null
+      ? { objectPosition: `${Math.round(project.cover.fx * 100)}% ${Math.round(project.cover.fy * 100)}%` }
+      : undefined
 
   return (
     <a className="stack-card" href={`/work/${project.slug}`}>
@@ -91,7 +96,7 @@ function StackCard({ project, eager }: { project: ProjectCard; eager: boolean })
         ) : (
           poster && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={poster} alt="" loading={eager ? 'eager' : 'lazy'} />
+            <img src={poster} alt="" loading={eager ? 'eager' : 'lazy'} style={focus} />
           )
         )}
       </div>

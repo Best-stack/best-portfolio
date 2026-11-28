@@ -1,6 +1,6 @@
 import type { PortableTextBlock } from '@portabletext/react'
 
-export type Img = { url: string; alt?: string; w?: number; h?: number } | null
+export type Img = { url: string; alt?: string; w?: number; h?: number; fx?: number | null; fy?: number | null } | null
 
 export type Settings = {
   name: string
