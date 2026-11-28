@@ -43,7 +43,6 @@ export function Footer({ settings, projects }: { settings: Settings; projects: P
           <span>
             © {new Date().getFullYear()} {settings.name}
           </span>
-          <span>Designed &amp; built in Toronto</span>
         </div>
       </div>
     </footer>

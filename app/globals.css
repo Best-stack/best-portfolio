@@ -411,3 +411,65 @@ a:hover { opacity: 0.7; }
 .philosophy > div { max-width: none; }
 /* Breathing room when text follows an image or video in a case study */
 .prose > .img-row + p, .prose > .media-figure + p, .prose > .ba + p { margin-top: 32px; }
+
+/* ---------- Mobile menu ---------- */
+.mm__toggle { display: none; }
+@media (max-width: 760px) {
+  .site-header__cta { display: none !important; }
+  .mm__toggle {
+    display: inline-flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 4px 0 16px;
+    border: 0; border-radius: 999px; background: var(--ink); color: var(--bg);
+    font: inherit; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer;
+  }
+  .mm__bars { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 36px; height: 36px; border-radius: 50%; background: var(--bg); padding: 0 10px; }
+  .mm__bars i { display: block; height: 2px; background: var(--ink); border-radius: 2px; }
+  .mm__bars i + i { width: 60%; margin-left: auto; }
+}
+.mm {
+  position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column;
+  padding: 28px 20px calc(28px + env(safe-area-inset-bottom));
+  background: var(--ink); color: var(--bg);
+  clip-path: circle(0% at calc(100% - 44px) 50px);
+  transition: clip-path .6s cubic-bezier(.7, 0, .2, 1);
+  text-transform: none; letter-spacing: normal;
+}
+.mm[hidden] { display: flex; visibility: hidden; transition: clip-path .5s cubic-bezier(.7, 0, .2, 1), visibility 0s .5s; }
+.mm.is-open { clip-path: circle(150% at calc(100% - 44px) 50px); visibility: visible; }
+html.menu-open { overflow: hidden; }
+.mm__top { display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+.mm__brand { font-size: 18px; min-height: 44px; display: inline-flex; align-items: center; }
+.mm__close { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid rgba(255, 255, 255, 0.3); background: none; color: inherit; font: inherit; cursor: pointer; }
+.mm__links { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.mm__links a {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.14); overflow: hidden;
+  font-size: clamp(44px, 14vw, 64px); font-weight: 600; letter-spacing: -0.045em; line-height: 1.05;
+}
+.mm__links a:first-child { border-top: 1px solid rgba(255, 255, 255, 0.14); }
+.mm__links a svg { width: 28px; height: 28px; opacity: 0.5; transition: transform .3s, opacity .3s; }
+.mm__links a:active svg, .mm__links a:hover svg { opacity: 1; transform: translate(3px, -3px); }
+.mm__links a[aria-current='page'] .mm__word { color: #8f8f86; }
+.mm__word, .mm__links a svg, .mm__foot { transform: translateY(110%); opacity: 0; }
+.mm.is-open .mm__word, .mm.is-open .mm__links a svg {
+  transform: none; opacity: 1;
+  transition: transform .7s cubic-bezier(.2, .8, .2, 1) var(--d), opacity .4s ease var(--d);
+}
+.mm__links a svg { transition-delay: 0s; }
+.mm__foot { display: flex; flex-direction: column; gap: 22px; }
+.mm.is-open .mm__foot { transform: none; opacity: 1; transition: transform .7s cubic-bezier(.2, .8, .2, 1) var(--d), opacity .4s ease var(--d); }
+.mm__cta {
+  display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border-radius: 999px;
+  background: var(--bg); color: var(--ink); font-size: 16px; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase;
+}
+.mm__socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; font-size: 15px; color: rgba(255, 255, 255, 0.7); }
+.mm__socials a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (min-width: 761px) { .mm { display: none !important; } }
+@media (prefers-reduced-motion: reduce) {
+  .mm, .mm[hidden] { transition: none; }
+  .mm__word, .mm__links a svg, .mm__foot { transform: none; opacity: 1; transition: none !important; }
+}
+@media (max-width: 760px) { .site-header nav.mm__links { display: flex; } }
+.mm__cta svg { width: 18px; height: 18px; }
+.mm__close { text-transform: inherit; letter-spacing: inherit; }
+.site-header .mm__links { gap: 0; }
+.site-header .mm [aria-current='page'] { text-decoration: none; }

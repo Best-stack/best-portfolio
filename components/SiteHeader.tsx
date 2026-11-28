@@ -1,6 +1,7 @@
 import type { Settings } from '@/lib/types'
 
 import { ArrowUpRight } from './icons'
+import { MobileMenu } from './MobileMenu'
 
 export function SiteHeader({ settings, current }: { settings: Settings; current?: 'work' | 'about' }) {
   return (
@@ -17,9 +18,10 @@ export function SiteHeader({ settings, current }: { settings: Settings; current?
         </a>
         {settings.resumeUrl && <a href={settings.resumeUrl}>Resume</a>}
       </nav>
-      <a href={settings.calendlyUrl ?? '/about#contact'}>
+      <a className="site-header__cta" href={settings.calendlyUrl ?? '/about#contact'}>
         Let&apos;s connect <ArrowUpRight />
       </a>
+      <MobileMenu settings={settings} current={current} />
     </header>
   )
 }
