@@ -25,8 +25,8 @@ jobs:
       - name: Convert
         run: |
           cd /tmp/cap/out
-          ffmpeg -nostdin -y -loglevel error -f concat -safe 0 -i list.txt -vf "fps=30,crop=2880:1400:0:0,scale=2400:-2:flags=lanczos" -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p -movflags +faststart -an hero-hq.mp4
-          cp frames/00010.png still.png || true
+          ffmpeg -nostdin -y -loglevel error -f concat -safe 0 -i list.txt -vf "fps=30,scale=2400:-2:flags=lanczos" -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p -movflags +faststart -an hero-hq.mp4
+          cp frames/00010.jpg still.jpg || true
           rm -rf frames list.txt
           ls -la
       - name: Save

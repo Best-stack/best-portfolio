@@ -398,3 +398,5 @@ a:hover { opacity: 0.7; }
 /* Philosophy rules line up with the other homepage dividers */
 .philosophy { margin: 0 max(var(--gutter), calc((100% - 1360px) / 2 + var(--gutter))); }
 .philosophy > div { max-width: none; }
+/* Breathing room when text follows an image or video in a case study */
+.prose > .img-row + p, .prose > .media-figure + p, .prose > .ba + p { margin-top: 32px; }

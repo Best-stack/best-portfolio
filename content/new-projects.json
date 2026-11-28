@@ -1167,7 +1167,7 @@
           "heading": "Homepage",
           "content": [
             {
-              "p": "The launch homepage:"
+              "p": "The previous homepage:"
             },
             {
               "img": [
@@ -1178,12 +1178,12 @@
               ]
             },
             {
-              "p": "The new hero. The search bar cycles through real questions people ask about agentic AI."
+              "p": "The new hero:"
             },
             {
               "video": {
                 "src": "aaif/hero-live.mp4",
-                "caption": "The new homepage hero, live on aaif.io",
+                "caption": "The search bar cycles through real questions people ask about agentic AI",
                 "layout": "wide",
                 "autoplay": true
               }
@@ -1234,12 +1234,12 @@
           "heading": "Community Chapters",
           "content": [
             {
-              "p": "Every chapter card uses a line drawing of a landmark from its city: the Golden Gate for San Francisco, the canal houses for Amsterdam, Sagrada Família for Barcelona. Each city gets its own soft colour, so a long list of chapters still feels local, and the cover works in light and dark."
+              "p": "Every chapter card uses a line drawing of a landmark from its city: the Golden Gate for San Francisco, the canal houses for Amsterdam, Sagrada Família for Barcelona. Each city gets its own soft colour, so a long list of chapters still feels local."
             },
             {
               "img": [
                 {
-                  "src": "aaif/chapter-covers.jpg",
+                  "src": "aaif/chapter-covers-light.jpg",
                   "size": "full"
                 }
               ]
